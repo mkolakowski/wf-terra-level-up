@@ -12,7 +12,8 @@
   const fmt = (n) => Number(n || 0).toLocaleString('en-US');
 
   let tracker, data, gear, nodes;
-  const state = { filter: 'all', sort: 'default', q: '', tier: 'all' };
+  const state = { filter: 'all', sort: 'default', q: '', tier: 'all', chartView: 'planet' };
+  try { state.chartView = localStorage.getItem('chartView') || 'planet'; } catch (e) { /* ignore */ }
 
   // ---------- helpers ----------
   function img(d, cls = '') {
@@ -285,25 +286,76 @@
     const [a, b] = String(n.d.levels).split('-').map(Number);
     return ` · Lv ${a + 100}-${b + 100}`;
   }
+  // Rough minutes to clear each mission type once (Steel Path minimums: 5 waves / 5 minutes / 1 round)
+  const MISSION_MINUTES = {
+    Capture: 2, Exterminate: 3, Sabotage: 4, Rescue: 4, Assassination: 5, Spy: 5, Survival: 5,
+    'Mobile Defense': 6, Hijack: 6, Interception: 6, Excavation: 6, Defense: 7, Disruption: 8,
+    Defection: 8, Arena: 6, Pursuit: 5, 'Archwing Assassination': 6,
+  };
+  const minutesFor = (n) => (n.d && MISSION_MINUTES[n.d.mission]) || 10;
+  const lockSvg = '<svg width="12" height="14" viewBox="0 0 12 14" aria-label="Locked"><rect x="1" y="6" width="10" height="7" rx="1.5" fill="currentColor"/><path d="M3.5 6V4a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+
+  // Priority: open nodes that unlock others first, then quickest missions; each locked node
+  // follows right after the node that opens it; locked nodes with an unknown unlocker go last.
+  function prioritizedNodes(left) {
+    const unlocks = (n) => left.filter((x) => x.locked && x.unlockedBy === n.name && x.planet === n.planet);
+    const score = (n) => (n.priority != null ? n.priority * 1000 : 0) - unlocks(n).length * 20 + minutesFor(n);
+    const open = left.filter((n) => !n.locked).sort((a, b) => score(a) - score(b) || a.name.localeCompare(b.name));
+    const out = [];
+    const place = (n) => {
+      out.push(n);
+      unlocks(n).sort((a, b) => minutesFor(a) - minutesFor(b)).forEach(place);
+    };
+    open.forEach(place);
+    left.filter((n) => !out.includes(n))
+      .sort((a, b) => minutesFor(a) - minutesFor(b) || a.planet.localeCompare(b.planet))
+      .forEach((n) => out.push(n));
+    return out.map((n) => ({ n, unlocks: unlocks(n) }));
+  }
+
+  function nodeCard(n, extra = '') {
+    return `
+      <div class="node${n.locked ? ' locked' : ''}">
+        <h3>${n.locked ? lockSvg : ''}${esc(n.name)}</h3>
+        <div class="meta">${esc(n.d ? n.d.mission : '')}${n.d && n.d.faction ? ` · ${esc(n.d.faction)}` : ''}${esc(levelText(n))}</div>
+        <div class="badges">${extra}${n.d && n.d.darkSector ? '<span class="badge ds">Dark Sector</span>' : ''}${n.locked ? '<span class="badge locked">Locked</span>' : ''}</div>
+        ${n.tip ? `<p class="small muted" style="margin:6px 0 0">${esc(n.tip)}</p>` : ''}
+      </div>`;
+  }
+
   function renderStarChart() {
     const left = nodes.filter((n) => !n.done);
     const mode = tracker.player.chartMode || 'Star chart';
     const sp = mode === 'Steel Path';
-    $('#starchart').innerHTML = left.length ? `
-      <p class="muted">${left.length} incomplete ${esc(mode)} nodes from the screenshots (${left.filter((n) => !n.locked).length} open now, the rest unlock as their neighbors are finished).
-        ${sp ? 'Steel Path nodes give the same mastery XP as the normal version a second time; enemies are +100 levels and drop Steel Essence from Acolytes along the way.' : 'Each node gives its mastery XP once, and again on the Steel Path.'}</p>
-      ${planetsOf(left).map((pl) => `
+    if (!left.length) { $('#starchart').innerHTML = '<div class="empty">Star chart complete!</div>'; return; }
+    const intro = `<p class="muted">${left.length} incomplete ${esc(mode)} nodes from the screenshots (${left.filter((n) => !n.locked).length} open now, the rest unlock as their neighbors are finished).
+        ${sp ? 'Steel Path nodes give the same mastery XP as the normal version a second time; enemies are +100 levels and drop Steel Essence from Acolytes along the way.' : 'Each node gives its mastery XP once, and again on the Steel Path.'}</p>`;
+    const toggle = `<div class="toolbar" id="chartView">
+        <button class="chip${state.chartView === 'planet' ? ' on' : ''}" data-v="planet">By planet</button>
+        <button class="chip${state.chartView === 'priority' ? ' on' : ''}" data-v="priority">By priority</button>
+      </div>`;
+    let body;
+    if (state.chartView === 'priority') {
+      const list = prioritizedNodes(left);
+      body = `<p class="muted small">Order: open nodes that unlock other nodes first, then the quickest mission types (rough clear time shown). Each locked node is listed right after the node that opens it.</p>
+        <ol class="prio-list">${list.map(({ n, unlocks }) => `
+          <li>${nodeCard(n, `<span class="badge">${esc(n.planet)}</span><span class="badge xp">~${minutesFor(n)} min</span>${unlocks.length ? `<span class="badge owned">Unlocks ${unlocks.map((u) => esc(u.name)).join(', ')}</span>` : ''}`)}</li>`).join('')}
+        </ol>`;
+    } else {
+      body = planetsOf(left).map((pl) => `
         <div class="planet">
           <h2>${esc(pl)} <span class="muted small">(${left.filter((n) => n.planet === pl).length} left)</span></h2>
-          <div class="nodes">${left.filter((n) => n.planet === pl).map((n) => `
-            <div class="node${n.locked ? ' locked' : ''}">
-              <h3>${n.locked ? '<svg width="12" height="14" viewBox="0 0 12 14" aria-label="Locked"><rect x="1" y="6" width="10" height="7" rx="1.5" fill="currentColor"/><path d="M3.5 6V4a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>' : ''}${esc(n.name)}</h3>
-              <div class="meta">${esc(n.d ? n.d.mission : '')}${n.d && n.d.faction ? ` · ${esc(n.d.faction)}` : ''}${esc(levelText(n))}</div>
-              <div class="badges">${n.d && n.d.darkSector ? '<span class="badge ds">Dark Sector</span>' : ''}${n.locked ? '<span class="badge locked">Locked</span>' : ''}</div>
-              ${n.tip ? `<p class="small muted" style="margin:6px 0 0">${esc(n.tip)}</p>` : ''}
-            </div>`).join('')}
-          </div>
-        </div>`).join('')}` : '<div class="empty">Star chart complete!</div>';
+          <div class="nodes">${left.filter((n) => n.planet === pl).map((n) => nodeCard(n)).join('')}</div>
+        </div>`).join('');
+    }
+    $('#starchart').innerHTML = intro + toggle + body;
+    $('#chartView').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-v]');
+      if (!b) return;
+      state.chartView = b.dataset.v;
+      try { localStorage.setItem('chartView', state.chartView); } catch (err) { /* ignore */ }
+      renderStarChart();
+    });
   }
 
   // ---------- render: prime parts ----------

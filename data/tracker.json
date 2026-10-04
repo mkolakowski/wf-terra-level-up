@@ -191,13 +191,15 @@
       "planet": "Mars",
       "name": "Wahiba",
       "locked": true,
-      "tip": "Locked - opens after Ultor."
+      "tip": "Locked - opens after Ultor.",
+      "unlockedBy": "Ultor"
     },
     {
       "planet": "Mars",
       "name": "Kadesh",
       "locked": true,
-      "tip": "Locked - opens after Ultor."
+      "tip": "Locked - opens after Ultor.",
+      "unlockedBy": "Ultor"
     },
     {
       "planet": "Deimos",
@@ -238,7 +240,8 @@
       "planet": "Ceres",
       "name": "Thon",
       "locked": true,
-      "tip": "Locked - opens after Kiste."
+      "tip": "Locked - opens after Kiste.",
+      "unlockedBy": "Kiste"
     },
     {
       "planet": "Jupiter",
@@ -288,7 +291,8 @@
       "planet": "Jupiter",
       "name": "Galilea",
       "locked": true,
-      "tip": "Locked - opens after Thebe."
+      "tip": "Locked - opens after Thebe.",
+      "unlockedBy": "Thebe"
     },
     {
       "planet": "Europa",
@@ -328,13 +332,15 @@
       "planet": "Europa",
       "name": "Valac",
       "locked": true,
-      "tip": "Locked - opens after Orias."
+      "tip": "Locked - opens after Orias.",
+      "unlockedBy": "Orias"
     },
     {
       "planet": "Europa",
       "name": "Kokabiel",
       "locked": true,
-      "tip": "Locked - opens after Valefor."
+      "tip": "Locked - opens after Valefor.",
+      "unlockedBy": "Valefor"
     },
     {
       "planet": "Europa",
@@ -384,7 +390,8 @@
       "planet": "Saturn",
       "name": "Caracol",
       "locked": true,
-      "tip": "Locked - opens after Pandora."
+      "tip": "Locked - opens after Pandora.",
+      "unlockedBy": "Pandora"
     },
     {
       "planet": "Uranus",
@@ -414,7 +421,8 @@
       "planet": "Uranus",
       "name": "Caelus",
       "locked": true,
-      "tip": "Locked - opens after Cressida."
+      "tip": "Locked - opens after Cressida.",
+      "unlockedBy": "Cressida"
     },
     {
       "planet": "Uranus",
@@ -438,7 +446,8 @@
       "planet": "Uranus",
       "name": "Assur",
       "locked": true,
-      "tip": "Locked - opens after Puck."
+      "tip": "Locked - opens after Puck.",
+      "unlockedBy": "Puck"
     },
     {
       "planet": "Neptune",
@@ -460,7 +469,8 @@
       "planet": "Neptune",
       "name": "Yursa",
       "locked": true,
-      "tip": "Locked - unlocks after you finish Salacia."
+      "tip": "Locked - unlocks after you finish Salacia.",
+      "unlockedBy": "Salacia"
     },
     {
       "planet": "Pluto",
@@ -490,7 +500,8 @@
       "planet": "Pluto",
       "name": "Acheron",
       "locked": true,
-      "tip": "Locked - unlocks after you finish Oceanum."
+      "tip": "Locked - unlocks after you finish Oceanum.",
+      "unlockedBy": "Oceanum"
     },
     {
       "planet": "Sedna",
@@ -512,7 +523,8 @@
       "planet": "Sedna",
       "name": "Sangeru",
       "locked": true,
-      "tip": "Locked - opens after Berehynia."
+      "tip": "Locked - opens after Berehynia.",
+      "unlockedBy": "Berehynia"
     },
     {
       "planet": "Sedna",
@@ -554,7 +566,8 @@
       "planet": "Eris",
       "name": "Xini",
       "locked": true,
-      "tip": "Locked - opens after Kala-Azar."
+      "tip": "Locked - opens after Kala-Azar.",
+      "unlockedBy": "Kala-Azar"
     },
     {
       "planet": "Eris",
