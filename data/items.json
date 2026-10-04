@@ -1,0 +1,5110 @@
+{
+ "generated": "2026-10-04",
+ "items": {
+  "Narin": {
+   "name": "Narin",
+   "category": "Warframes",
+   "type": "Warframe",
+   "description": "Narin descends in swirling eddies, her blade keen and deadly as an icy wind. She wields ice to defend as deftly as her swift rapier strikes.",
+   "masteryReq": 0,
+   "image": "Narin.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Narin",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2026-09-23",
+   "maxRank": 30,
+   "xpPerRank": 200,
+   "masteryXP": 6000,
+   "buildPrice": 25000,
+   "buildTime": 259200,
+   "marketCost": 0,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Zariman/Halako Perimeter (Exterminate)",
+       "chance": 8.89,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Zariman/The Greenway (Mobile Defense)",
+       "chance": 8.89,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Chassis",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Zariman/Everview Arc (Void Flood)",
+       "chance": 8.33,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Neuroptics",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Zariman/Tuvul Commons (Void Cascade)",
+       "chance": 8.33,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Systems",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Zariman/Oro Works (Void Armageddon)",
+       "chance": 8.33,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 1,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Kuva Ghoulsaw": {
+   "name": "Kuva Ghoulsaw",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "The addition of Kuva has forged the savage Ghoulsaw into an even more brutal weapon, allowing for faster attacks.",
+   "masteryReq": 13,
+   "image": "KuvaGhoulSaw.png",
+   "wikiImage": "https://wiki.warframe.com/images/KuvaGhoulsaw.png?938a6",
+   "wiki": "https://wiki.warframe.com/w/Kuva_Ghoulsaw",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2026-03-25",
+   "maxRank": 40,
+   "xpPerRank": 100,
+   "masteryXP": 4000,
+   "buildPrice": 10000,
+   "buildTime": 60,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    }
+   ],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Sagek Prime": {
+   "name": "Sagek Prime",
+   "category": "Secondary",
+   "type": "Pistol",
+   "description": "The sidearm of choice for Prime Grineer warriors, Sagek Prime blends Grineer brutality with Orokin aesthetics. When Sagek Prime inflicts a critical hit, its next shot has a chance to gain significant Status Chance.",
+   "masteryReq": 14,
+   "image": "GrnOrokinPistol.png",
+   "wikiImage": "https://wiki.warframe.com/images/SagekPrime.png?fafd2",
+   "wiki": "https://wiki.warframe.com/w/Sagek_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2025-12-10",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Dark Refractory, Deimos/Recall: Dactolyst (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Hunhullus (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Vanguard (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/The Guilty (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Dark Refractory, Deimos/Recall: Dactolyst (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Hunhullus (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Vanguard (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/The Guilty (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Dark Refractory, Deimos/Recall: Dactolyst (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Hunhullus (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Vanguard (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/The Guilty (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 5,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Akarius": {
+   "name": "Akarius",
+   "category": "Secondary",
+   "type": "Pistol",
+   "description": "Bombard legions of enemies with target seeking rockets. These dual launchers reload faster while sprinting, even more so in Gauss’ hands. Rockets arm after reaching a safe distance.",
+   "masteryReq": 8,
+   "image": "SapientPistol.png",
+   "wikiImage": "https://wiki.warframe.com/images/Akarius.png?42673",
+   "wiki": "https://wiki.warframe.com/w/Akarius",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2019-08-29",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 20000,
+   "buildTime": 86400,
+   "marketCost": 225,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Demolisher Boiler",
+       "chance": 2.5,
+       "rarity": "Common"
+      },
+      {
+       "location": "Demolisher Charger",
+       "chance": 2.5,
+       "rarity": "Common"
+      },
+      {
+       "location": "Demolisher Juggernaut",
+       "chance": 2.5,
+       "rarity": "Common"
+      },
+      {
+       "location": "Demolisher Thrasher",
+       "chance": 2.5,
+       "rarity": "Common"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Hexenon",
+     "count": 150,
+     "image": "ComponentConcentratedGas.png"
+    },
+    {
+     "name": "Nano Spores",
+     "count": 7500,
+     "image": "ComponentNanospores.png"
+    },
+    {
+     "name": "Neurodes",
+     "count": 3,
+     "image": "ComponentNeurode.png"
+    },
+    {
+     "name": "Polymer Bundle",
+     "count": 1600,
+     "image": "PolymerBundle.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Afentis Prime": {
+   "name": "Afentis Prime",
+   "category": "Primary",
+   "type": "Rifle",
+   "description": "The gilded speargun of Styanax Prime shines like a beacon across the battlefield, invigorating allies and stunning enemies.",
+   "masteryReq": 13,
+   "image": "AfentisPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/AfentisPrime.png?7c419",
+   "wiki": "https://wiki.warframe.com/w/Afentis_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-06-17",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "afentis_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Axi A22",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "afentis_prime_barrel",
+     "relics": [
+      {
+       "relic": "Neo C10",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo C8",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Blade",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "afentis_prime_blade",
+     "relics": [
+      {
+       "relic": "Meso A12",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "afentis_prime_handle",
+     "relics": [
+      {
+       "relic": "Lith Q3",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Meso D9",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Lato Vandal": {
+   "name": "Lato Vandal",
+   "category": "Secondary",
+   "type": "Pistol",
+   "description": "A special version of the standard Lato pistol with a slower Fire Rate but offering higher Accuracy and Damage values. The Lato Vandal has been customized by the Tenno with a blue-green metallic finish and Lotus branding on the grips.",
+   "masteryReq": 7,
+   "image": "LatoVandal.png",
+   "wikiImage": "https://wiki.warframe.com/images/LatoVandal.png?6fc4a",
+   "wiki": "https://wiki.warframe.com/w/Lato_Vandal",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2013-03-18",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 25000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Elite Sanctuary Onslaught",
+       "chance": 3.16,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Elite Sanctuary Onslaught",
+       "chance": 3.16,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Elite Sanctuary Onslaught",
+       "chance": 3.16,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Akmagnus Prime": {
+   "name": "Akmagnus Prime",
+   "category": "Secondary",
+   "type": "Dual Pistols",
+   "description": "Fill your fists with golden cannons of fury. This refined design unlocks quicker handling and higher critical chance.",
+   "masteryReq": 15,
+   "image": "AkmagnusPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/AkmagnusPrime.png?c2bbb",
+   "wiki": "https://wiki.warframe.com/w/Akmagnus_Prime",
+   "isPrime": true,
+   "vaulted": true,
+   "releaseDate": "2024-07-22",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "akmagnus_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Axi M5",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Link",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "akmagnus_prime_link",
+     "relics": [
+      {
+       "relic": "Axi M5",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [],
+   "requiresItems": [
+    {
+     "name": "Magnus Prime",
+     "count": 2
+    }
+   ]
+  },
+  "Sarofang Prime": {
+   "name": "Sarofang Prime",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "Voruna Prime's signature axe is adorned with Orokin gold. She personally ensured that the former owners would have no further use for it.",
+   "masteryReq": 16,
+   "image": "SarofangPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/SarofangPrime.png?a466a",
+   "wiki": "https://wiki.warframe.com/w/Sarofang_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-04-08",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "sarofang_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Meso E7",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo A16",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Blade",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "sarofang_prime_blade",
+     "relics": [
+      {
+       "relic": "Lith S19",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi S20",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "sarofang_prime_handle",
+     "relics": [
+      {
+       "relic": "Meso A12",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo S20",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo V13",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 15,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Athodai Prime": {
+   "name": "Athodai Prime",
+   "category": "Secondary",
+   "type": "Pistol",
+   "description": "Unleash the song of the righteous warrior with this gilded pistol that goes into Overdrive on Weak Point kills, maximizing fire rate and ammo efficiency for a short time.",
+   "masteryReq": 14,
+   "image": "AthodaiPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/AthodaiPrime.png?7c419",
+   "wiki": "https://wiki.warframe.com/w/Athodai_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-06-17",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "athodai_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Meso K9",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso L5",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "athodai_prime_barrel",
+     "relics": [
+      {
+       "relic": "Neo A16",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "athodai_prime_receiver",
+     "relics": [
+      {
+       "relic": "Axi P10",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Wrath": {
+   "name": "Wrath",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "The wrath of one who knows revenge is all about timing. Orion's signature Heavy Scythe.",
+   "masteryReq": 14,
+   "image": "TnOrionScytheWeapon.png",
+   "wikiImage": "https://wiki.warframe.com/images/Wrath.png?ff3cf",
+   "wiki": "https://wiki.warframe.com/w/Wrath",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2026-06-17",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 20000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Uranus/Scoria's Angel (Skirmish)",
+       "chance": 14.29,
+       "rarity": "Uncommon"
+      }
+     ]
+    },
+    {
+     "name": "Blade",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Uranus/Scoria's Angel (Skirmish)",
+       "chance": 14.29,
+       "rarity": "Uncommon"
+      }
+     ]
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Uranus/Scoria's Angel (Skirmish)",
+       "chance": 14.29,
+       "rarity": "Uncommon"
+      }
+     ]
+    }
+   ],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Vadarya Prime": {
+   "name": "Vadarya Prime",
+   "category": "Primary",
+   "type": "Sniper",
+   "description": "Caliban Prime's signature sniper rifle is no mere ceremonial weapon. A sign, perhaps, that peace between Orokin and Sentient was destined to be fleeting. Struck enemies become lightning rods, with a chance to attract bolts of chain lightning that can jump to nearby enemies.",
+   "masteryReq": 15,
+   "image": "VadaryaPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/VadaryaPrime.png?40feb",
+   "wiki": "https://wiki.warframe.com/w/Vadarya_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2025-08-26",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "vadarya_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Meso V12",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso V15",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo V13",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "vadarya_prime_barrel",
+     "relics": [
+      {
+       "relic": "Lith L7",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith S18",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo A15",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi Y3",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "vadarya_prime_receiver",
+     "relics": [
+      {
+       "relic": "Lith G14",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Meso L5",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo C11",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo C7",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo S20",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi S18",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Stock",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "vadarya_prime_stock",
+     "relics": [
+      {
+       "relic": "Lith N19",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith O4",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso X1",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Axi A21",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Axi C12",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Twin Kohmak": {
+   "name": "Twin Kohmak",
+   "category": "Secondary",
+   "type": "Pistol",
+   "description": "Doubling their volley on each successive shot, the Twin Kohmaks decimate foes in seconds.",
+   "masteryReq": 10,
+   "image": "TwinKohmak.png",
+   "wikiImage": "https://wiki.warframe.com/images/TwinKohmak.png?77ae6",
+   "wiki": "https://wiki.warframe.com/w/Twin_Kohmak",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2015-03-19",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 20000,
+   "buildTime": 43200,
+   "marketCost": 225,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Kela De Thaym",
+       "chance": 25,
+       "rarity": "Common"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Forma",
+     "count": 1,
+     "image": "GenericComponent.png"
+    }
+   ],
+   "requiresItems": [
+    {
+     "name": "Kohmak",
+     "count": 2
+    }
+   ]
+  },
+  "Pride": {
+   "name": "Pride",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "The pride of one that knows their worth. Sirius' signature Heavy Scythe.",
+   "masteryReq": 14,
+   "image": "TnSiriusScytheWeapon.png",
+   "wikiImage": "https://wiki.warframe.com/images/Pride.png?917b2",
+   "wiki": "https://wiki.warframe.com/w/Pride",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2026-06-17",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 20000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Uranus/The Kuva Wytch (Skirmish)",
+       "chance": 14.29,
+       "rarity": "Uncommon"
+      }
+     ]
+    },
+    {
+     "name": "Blade",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Uranus/The Kuva Wytch (Skirmish)",
+       "chance": 14.29,
+       "rarity": "Uncommon"
+      }
+     ]
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Uranus/The Kuva Wytch (Skirmish)",
+       "chance": 14.29,
+       "rarity": "Uncommon"
+      }
+     ]
+    }
+   ],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Styanax Prime": {
+   "name": "Styanax Prime",
+   "category": "Warframes",
+   "type": "Warframe",
+   "description": "Shield of the innocent. Spear of justice. Styanax Prime holds the line in defiance of tyranny.",
+   "masteryReq": 0,
+   "image": "StyanaxPrime.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Styanax%2FPrime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-06-17",
+   "maxRank": 30,
+   "xpPerRank": 200,
+   "masteryXP": 6000,
+   "buildPrice": 25000,
+   "buildTime": 259200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "styanax_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Neo V13",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi A21",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Chassis",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Meso Y2",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Neuroptics",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Lith S18",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Systems",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Neo C10",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo Y1",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 5,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Corvas Prime": {
+   "name": "Corvas Prime",
+   "category": "Arch-Gun",
+   "type": "Arch-Gun",
+   "description": "Flaunting ceremonial beauty, this arch gun flak cannon is even more devastating than its standard issue counterpart.",
+   "masteryReq": 14,
+   "image": "CorvasPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/CorvasPrime.png?290fd",
+   "wiki": "https://wiki.warframe.com/w/Corvas_Prime_(Atmosphere)",
+   "isPrime": true,
+   "vaulted": true,
+   "releaseDate": "2022-03-28",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 45000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "corvas_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Lith W3",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso B8",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso H8",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo D5",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo L2",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi K7",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "corvas_prime_barrel",
+     "relics": [
+      {
+       "relic": "Meso C9",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo C2",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo C4",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo C5",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "corvas_prime_receiver",
+     "relics": [
+      {
+       "relic": "Lith D6",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith G8",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso A4",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso G4",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo D7",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi G10",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi K8",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi T10",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Stock",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "corvas_prime_stock",
+     "relics": [
+      {
+       "relic": "Lith K10",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith S12",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso G5",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo C3",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo K8",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi G8",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Corufell Prime": {
+   "name": "Corufell Prime",
+   "category": "Arch-Melee",
+   "type": "Arch-Melee",
+   "description": "Corufell Prime's golden vines streamline its transformation for even faster Heavy Attacks.",
+   "masteryReq": 16,
+   "image": "CorufellPrime.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Corufell_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-09-23",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "corufell_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Meso V17",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "corufell_prime_handle",
+     "relics": [
+      {
+       "relic": "Axi C12",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "corufell_prime_receiver",
+     "relics": [
+      {
+       "relic": "Neo C10",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Stock",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "corufell_prime_stock",
+     "relics": [
+      {
+       "relic": "Lith C15",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 15,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Kestrel Prime": {
+   "name": "Kestrel Prime",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "With heightened agility and power the Kestrel Prime's heavy attacks easily knock down foes, ensuring none shall stand before it.",
+   "masteryReq": 11,
+   "image": "KestrelPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/KestrelPrime.png?707c8",
+   "wiki": "https://wiki.warframe.com/w/Kestrel_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2025-12-10",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "kestrel_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Meso P17",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo N24",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo T11",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Axi C12",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Blade",
+     "count": 2,
+     "ducats": 15,
+     "tradable": true,
+     "market": "kestrel_prime_blade",
+     "relics": [
+      {
+       "relic": "Lith C14",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith D7",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith L8",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith S18",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Grip",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "kestrel_prime_grip",
+     "relics": [
+      {
+       "relic": "Meso K8",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      },
+      {
+       "relic": "Meso K9",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo K9",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Braton Vandal": {
+   "name": "Braton Vandal",
+   "category": "Primary",
+   "type": "Rifle",
+   "description": "A special version of the standard Braton rifle with a slower Fire Rate but offering higher accuracy and damage values. The Braton Vandal has been customized by the Tenno with a blue-green metallic finish and Lotus branding on the grips.",
+   "masteryReq": 4,
+   "image": "BratonVandal.png",
+   "wikiImage": "https://wiki.warframe.com/images/BratonVandal.png?b43a3",
+   "wiki": "https://wiki.warframe.com/w/Braton_Vandal",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2013-02-15",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 25000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Elite Sanctuary Onslaught",
+       "chance": 3.16,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Elite Sanctuary Onslaught",
+       "chance": 3.16,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Elite Sanctuary Onslaught",
+       "chance": 3.16,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Stock",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Elite Sanctuary Onslaught",
+       "chance": 3.16,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Cinta": {
+   "name": "Cinta",
+   "category": "Primary",
+   "type": "Bow",
+   "description": "The versatile Cinta can fire arrows in quick succession, quickly charge a shock wave, or fully charge a powerful focused shot.",
+   "masteryReq": 6,
+   "image": "DaxDuviriAsymmetricalLongBow.png",
+   "wikiImage": "https://wiki.warframe.com/images/Cinta.png?bac02",
+   "wiki": "https://wiki.warframe.com/w/Cinta",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2023-04-26",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 25000,
+   "buildTime": 43200,
+   "marketCost": 225,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    },
+    {
+     "name": "Grip",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    },
+    {
+     "name": "Lower Limb",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    },
+    {
+     "name": "String",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    },
+    {
+     "name": "Upper Limb",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    }
+   ],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Perigale Prime": {
+   "name": "Perigale Prime",
+   "category": "Primary",
+   "type": "Rifle",
+   "description": "The one who exalted Voruna to her Prime form imbued her signature sniper rifle with increased magazine size and ammo capacity, as if to arm her for a long hunt.",
+   "masteryReq": 14,
+   "image": "PerigalePrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/PerigalePrime.png?f520e",
+   "wiki": "https://wiki.warframe.com/w/Perigale_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-04-08",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "perigale_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Lith L8",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso A12",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Meso L4",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "perigale_prime_barrel",
+     "relics": [
+      {
+       "relic": "Neo P10",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi P10",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "perigale_prime_receiver",
+     "relics": [
+      {
+       "relic": "Lith C14",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith T14",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Meso K9",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Stock",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "perigale_prime_stock",
+     "relics": [
+      {
+       "relic": "Neo A16",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo T11",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Axi C11",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Citrine Prime": {
+   "name": "Citrine Prime",
+   "category": "Warframes",
+   "type": "Warframe",
+   "description": "The crystalline citadel ascends. Citrine Prime captivates with refined radiance, her brilliant gems set within the finest gold filigree.",
+   "masteryReq": 0,
+   "image": "CitrinePrime.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Citrine%2FPrime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-09-23",
+   "maxRank": 30,
+   "xpPerRank": 200,
+   "masteryXP": 6000,
+   "buildPrice": 25000,
+   "buildTime": 259200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "citrine_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Meso C11",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Chassis",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Neo C11",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Neuroptics",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Axi C12",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Systems",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Lith S19",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 5,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Haalvu": {
+   "name": "Haalvu",
+   "category": "Primary",
+   "type": "Rifle",
+   "description": "Deliver a ruthless barrage of Sentient artillery from this instrument of death. Alt-fire splits the weapon apart into separate rifles, expanding its devastation by tracking up to 4 targets at once, while consuming more ammo per shot.",
+   "masteryReq": 14,
+   "image": "TnoOctaMiniGun.png",
+   "wikiImage": "https://wiki.warframe.com/images/Haalvu.png?c2ddd",
+   "wiki": "https://wiki.warframe.com/w/Haalvu",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2026-07-11",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": null,
+   "buildTime": null,
+   "marketCost": null,
+   "parts": [],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Thornbak": {
+   "name": "Thornbak",
+   "category": "Primary",
+   "type": "Rifle",
+   "description": "A sturdy burst-rifle of considerable age and unknown origin collected by Teshin during his many years wandering the Origin System.",
+   "masteryReq": 0,
+   "image": "ModQuestRifle.png",
+   "wikiImage": "https://wiki.warframe.com/images/Thornbak.png?ac555",
+   "wiki": "https://wiki.warframe.com/w/Thornbak",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2025-10-15",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Alloy Plate",
+     "count": 300,
+     "image": "AlloyPlate.png"
+    },
+    {
+     "name": "Circuits",
+     "count": 100,
+     "image": "ComponentCircuits.png"
+    },
+    {
+     "name": "Neurodes",
+     "count": 2,
+     "image": "ComponentNeurode.png"
+    },
+    {
+     "name": "Polymer Bundle",
+     "count": 100,
+     "image": "PolymerBundle.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Gyre Prime": {
+   "name": "Gyre Prime",
+   "category": "Warframes",
+   "type": "Warframe",
+   "description": "Gilded circuits spark and energize frenetic movements that echo through the ages. Dance into eternity with Gyre Prime.",
+   "masteryReq": 0,
+   "image": "GyrePrime.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Gyre%2FPrime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2025-12-10",
+   "maxRank": 30,
+   "xpPerRank": 200,
+   "masteryXP": 6000,
+   "buildPrice": 25000,
+   "buildTime": 259200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "gyre_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Lith Q3",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo T10",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi S21",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Chassis",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Lith A13",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi T13",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Neuroptics",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Lith G14",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Systems",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Meso E7",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso V14",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso Y2",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo K10",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 5,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Akvasto Prime": {
+   "name": "Akvasto Prime",
+   "category": "Secondary",
+   "type": "Pistol",
+   "description": "Orokin craftsmanship married with superior firepower. Dual Vastos, primed and ready to strike.",
+   "masteryReq": 12,
+   "image": "AkvastoPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/AkvastoPrime.png?d97f1",
+   "wiki": "https://wiki.warframe.com/w/Akvasto_Prime",
+   "isPrime": true,
+   "vaulted": true,
+   "releaseDate": "2018-11-13",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "akvasto_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Axi A5",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Link",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "akvasto_prime_link",
+     "relics": [
+      {
+       "relic": "Axi A5",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [],
+   "requiresItems": [
+    {
+     "name": "Vasto Prime",
+     "count": 2
+    }
+   ]
+  },
+  "Steflos Prime": {
+   "name": "Steflos Prime",
+   "category": "Primary",
+   "type": "Shotgun",
+   "description": "This rose has gilded thorns. Deal death from even further afar with Citrine Prime's signature shotgun.",
+   "masteryReq": 15,
+   "image": "SteflosPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/SteflosPrime.png?02487",
+   "wiki": "https://wiki.warframe.com/w/Steflos_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-09-23",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "steflos_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Neo Y2",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "steflos_prime_barrel",
+     "relics": [
+      {
+       "relic": "Axi S21",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "steflos_prime_receiver",
+     "relics": [
+      {
+       "relic": "Lith A13",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Stock",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "steflos_prime_stock",
+     "relics": [
+      {
+       "relic": "Meso D9",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Venato": {
+   "name": "Venato",
+   "category": "Melee",
+   "type": "Rifle",
+   "description": "Caliban’s signature scythe, forged from a limb wrenched off a fallen Eidolon centuries ago. 50% increased Melee Combo Counter Chance when wielded by Caliban.",
+   "masteryReq": 9,
+   "image": "SentJointedScytheWeapon.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Venato",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2021-12-15",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 20000,
+   "buildTime": 43200,
+   "marketCost": 175,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Anomaly Shard",
+     "count": 5,
+     "image": "AnomalyShard.png"
+    },
+    {
+     "name": "Exceptional Sentient Core",
+     "count": 5,
+     "image": "QuillsUncommonPickup.png"
+    },
+    {
+     "name": "Iradite",
+     "count": 60,
+     "image": "Iradite.png"
+    },
+    {
+     "name": "Narmer Isoplast",
+     "count": 16,
+     "image": "RailjackComponentProgens.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Voruna Prime": {
+   "name": "Voruna Prime",
+   "category": "Warframes",
+   "type": "Warframe",
+   "description": "Splendor and ferocity reach their savage apex in Voruna Prime. Though exalted by Orokin gold, she is more feral than ever.",
+   "masteryReq": 0,
+   "image": "VorunaPrime.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Voruna%2FPrime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2026-04-08",
+   "maxRank": 30,
+   "xpPerRank": 200,
+   "masteryXP": 6000,
+   "buildPrice": 25000,
+   "buildTime": 259200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "voruna_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Axi V14",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Chassis",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Lith N19",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi A21",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Neuroptics",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Meso A12",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Meso D8",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Systems",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": null,
+     "relics": [
+      {
+       "relic": "Lith V11",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      },
+      {
+       "relic": "Meso V17",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo V11",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo V12",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 5,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Morgha": {
+   "name": "Morgha",
+   "category": "Arch-Gun",
+   "type": "Arch-Gun",
+   "description": "Blast through enemies with a double-barreled shot of energized slugs. This siphons their life essence which is then used to generate the secondary fire's massive air-burst mortar. The ancient Entrati weapon was built for Necramechs but also functions as an Archgun.",
+   "masteryReq": 15,
+   "image": "ThanoTechGrenadeLauncher.png",
+   "wikiImage": "https://wiki.warframe.com/images/Morgha.png?fc121",
+   "wiki": "https://wiki.warframe.com/w/Morgha",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2020-11-19",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 20000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "NecraLoid (Loid), Clearance Odima",
+       "chance": 100,
+       "rarity": "Common"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Morgha Barrel",
+     "count": 1,
+     "image": "RepairedEntratiMechGunBarrel.png"
+    },
+    {
+     "name": "Morgha Receiver",
+     "count": 1,
+     "image": "RepairedEntratiMechGunReceiver.png"
+    },
+    {
+     "name": "Morgha Stock",
+     "count": 1,
+     "image": "RepairedEntratiMechGunStock.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Alternox Prime": {
+   "name": "Alternox Prime",
+   "category": "Primary",
+   "type": "Rifle",
+   "description": "Orokin gold enhances the conductivity of Gyre Prime's signature rifle, enabling it to fire massive electrifying orbs.",
+   "masteryReq": 13,
+   "image": "AlternoxPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/AlternoxPrime.png?707c8",
+   "wiki": "https://wiki.warframe.com/w/Alternox_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2025-12-10",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "alternox_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Lith A12",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      },
+      {
+       "relic": "Lith A13",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso A10",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi A20",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "alternox_prime_barrel",
+     "relics": [
+      {
+       "relic": "Lith L8",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith N18",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso K8",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "alternox_prime_receiver",
+     "relics": [
+      {
+       "relic": "Neo C9",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo P9",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi C12",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi V14",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Stock",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "alternox_prime_stock",
+     "relics": [
+      {
+       "relic": "Meso A9",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi A21",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Feverspine": {
+   "name": "Feverspine",
+   "category": "Misc",
+   "type": "K-Drive Component",
+   "description": "",
+   "masteryReq": 0,
+   "image": "HoverboardInfestedBDeck.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Feverspine",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": null,
+   "maxRank": 30,
+   "xpPerRank": 200,
+   "masteryXP": 6000,
+   "buildPrice": 5000,
+   "buildTime": 3600,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Adramal Alloy",
+     "count": 40,
+     "image": "DeimosCommonOreAAlloy.png"
+    },
+    {
+     "name": "Benign Infested Tumor",
+     "count": 50,
+     "image": "DeimosGenericSharedFishPart.png"
+    },
+    {
+     "name": "Ganglion",
+     "count": 25,
+     "image": "InfMapricoFruit.png"
+    },
+    {
+     "name": "Parasitic Tethermaw",
+     "count": 15,
+     "image": "DeimosInfestedFishGPart.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Sporothrix": {
+   "name": "Sporothrix",
+   "category": "Primary",
+   "type": "Sniper",
+   "description": "This long-distance rifle fires a razor-sharp, virus-soaked barb that continues to attack its host before violently erupting in a spore-laden mist. Scoped headshots increase lethality.",
+   "masteryReq": 13,
+   "image": "InfSniperRifle.png",
+   "wikiImage": "https://wiki.warframe.com/images/Sporothrix.png?106dc",
+   "wiki": "https://wiki.warframe.com/w/Sporothrix",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2020-11-19",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 20000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "NecraLoid (Loid), Clearance Odima",
+       "chance": 100,
+       "rarity": "Common"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 50 - 60 Arcana Isolation Vault)",
+       "chance": 12.5,
+       "rarity": "Uncommon"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 50 - 60 Isolation Vault)",
+       "chance": 6.25,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "NecraLoid (Loid), Clearance Odima",
+       "chance": 100,
+       "rarity": "Common"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 50 - 60 Arcana Isolation Vault)",
+       "chance": 7.5,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 50 - 60 Isolation Vault)",
+       "chance": 3.75,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "NecraLoid (Loid), Clearance Odima",
+       "chance": 100,
+       "rarity": "Common"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 50 - 60 Arcana Isolation Vault)",
+       "chance": 7.5,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 50 - 60 Isolation Vault)",
+       "chance": 3.75,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Stock",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "NecraLoid (Loid), Clearance Odima",
+       "chance": 100,
+       "rarity": "Common"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 50 - 60 Arcana Isolation Vault)",
+       "chance": 7.5,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 50 - 60 Isolation Vault)",
+       "chance": 3.75,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Cranial Foremount",
+     "count": 2,
+     "image": "DeimosOrokinFishCPart.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Korrudo": {
+   "name": "Korrudo",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "When they go high, go low. Powerful pneumatic grips and toecaps amplify every blow. Four ways to deal twice the pain.",
+   "masteryReq": 9,
+   "image": "GrnSpiderSparring.png",
+   "wikiImage": "https://wiki.warframe.com/images/Korrudo.png?ab27b",
+   "wiki": "https://wiki.warframe.com/w/Korrudo",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2019-04-04",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 30000,
+   "buildTime": 43200,
+   "marketCost": 150,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Narmer Thumper Doma",
+       "chance": 10,
+       "rarity": "Common"
+      },
+      {
+       "location": "Tusk Thumper Doma",
+       "chance": 10,
+       "rarity": "Common"
+      },
+      {
+       "location": "Narmer Thumper Bull",
+       "chance": 5,
+       "rarity": "Common"
+      },
+      {
+       "location": "Tusk Thumper Bull",
+       "chance": 5,
+       "rarity": "Common"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Auroxium Alloy",
+     "count": 25,
+     "image": "RareOreAAlloyA.png"
+    },
+    {
+     "name": "Breath Of The Eidolon",
+     "count": 5,
+     "image": "Eidolonium.png"
+    },
+    {
+     "name": "Esher Devar",
+     "count": 15,
+     "image": "CommonGemBCutA.png"
+    },
+    {
+     "name": "Mawfish Bones",
+     "count": 20,
+     "image": "FishResourceBones.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Spectra Vandal": {
+   "name": "Spectra Vandal",
+   "category": "Secondary",
+   "type": "Pistol",
+   "description": "A special-order Corpus cutting tool for master crafters only. Features distinctive azurite plating and a focusing crystal of precision clarity and cut.",
+   "masteryReq": 10,
+   "image": "CorpusLaserPistolVandal.png",
+   "wikiImage": "https://wiki.warframe.com/images/SpectraVandal.png?6057b",
+   "wiki": "https://wiki.warframe.com/w/Spectra_Vandal",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2019-05-22",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 25000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Veil Proxima/Flexa (Caches)",
+       "chance": 8.7,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/H-2 Cloud (Caches)",
+       "chance": 8.7,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/Nsu Grid (Caches)",
+       "chance": 8.7,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/R-9 Cloud (Caches)",
+       "chance": 8.7,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Veil Proxima/Flexa (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/H-2 Cloud (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/Nsu Grid (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/R-9 Cloud (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Chassis",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Veil Proxima/Flexa (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/H-2 Cloud (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/Nsu Grid (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/R-9 Cloud (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": null,
+     "tradable": true,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Veil Proxima/Flexa (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/H-2 Cloud (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/Nsu Grid (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Veil Proxima/R-9 Cloud (Caches)",
+       "chance": 6.52,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Venato Prime": {
+   "name": "Venato Prime",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "Fashioned from the willingly donated bone of the Sentient Ur-Hatho and embellished by Orokin luxurator Sembik Vol, Venato Prime was to be wielded against 'common enemies' of the united peoples – had any ever emerged from the darkness beyond Tau.",
+   "masteryReq": 14,
+   "image": "VenatoPrime.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Venato_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2025-08-26",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "venato_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Lith E2",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso A9",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo C8",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo K10",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Blade",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "venato_prime_blade",
+     "relics": [
+      {
+       "relic": "Meso V13",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      },
+      {
+       "relic": "Axi V13",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "venato_prime_handle",
+     "relics": [
+      {
+       "relic": "Meso G9",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso P17",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso V15",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo N24",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo Y2",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi A22",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Arum Spinosa": {
+   "name": "Arum Spinosa",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "Slash through enemies with two leaves of the exceedingly rare Arum Spinosa plant. Heavy Attack to whip a flurry of toxic spines at ranged attackers.",
+   "masteryReq": 11,
+   "image": "InfWarfanWeapon.png",
+   "wikiImage": null,
+   "wiki": "https://wiki.warframe.com/w/Arum_Spinosa",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2020-11-19",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 20000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "NecraLoid (Loid), Clearance Modus",
+       "chance": 100,
+       "rarity": "Common"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 40 - 50 Arcana Isolation Vault)",
+       "chance": 12.5,
+       "rarity": "Uncommon"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 40 - 50 Isolation Vault)",
+       "chance": 6.25,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Guard",
+     "count": 2,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "NecraLoid (Loid), Clearance Modus",
+       "chance": 100,
+       "rarity": "Common"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 40 - 50 Arcana Isolation Vault)",
+       "chance": 7.5,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 40 - 50 Isolation Vault)",
+       "chance": 3.75,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Rivet",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "NecraLoid (Loid), Clearance Modus",
+       "chance": 100,
+       "rarity": "Common"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 40 - 50 Arcana Isolation Vault)",
+       "chance": 4,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Deimos/Cambion Drift (Level 40 - 50 Isolation Vault)",
+       "chance": 2,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Cabochon Embolos",
+     "count": 1,
+     "image": "DeimosEidolonGemBCut.png"
+    },
+    {
+     "name": "Trapezium Xenorhast",
+     "count": 1,
+     "image": "DeimosEidolonGemACut.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Daikyu Prime": {
+   "name": "Daikyu Prime",
+   "category": "Primary",
+   "type": "Bow",
+   "description": "Long believed lost, the mighty Daikyu Prime was the pride of many a Tenno dojo. Designed to strike the foe where they are weakest, its powerful shots repay careful marksmanship.",
+   "masteryReq": 15,
+   "image": "DaikyuPrime.png",
+   "wikiImage": "https://wiki.warframe.com/images/DaikyuPrime.png?445ed",
+   "wiki": "https://wiki.warframe.com/w/Daikyu_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2025-05-21",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "daikyu_prime_blueprint",
+     "relics": [
+      {
+       "relic": "Lith E2",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith Q2",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith T14",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo C11",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo C8",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo N24",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi C12",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Grip",
+     "count": 1,
+     "ducats": 100,
+     "tradable": true,
+     "market": "daikyu_prime_grip",
+     "relics": [
+      {
+       "relic": "Lith D7",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso D8",
+       "tier": "Meso",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo D10",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 10,
+        "Intact": 2,
+        "Exceptional": 4,
+        "Flawless": 6
+       },
+       "rarity": "Rare",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Lower Limb",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "daikyu_prime_lower_limb",
+     "relics": [
+      {
+       "relic": "Lith A12",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Lith A8",
+       "tier": "Lith",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso A9",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Neo K10",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi C10",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi C11",
+       "tier": "Axi",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "String",
+     "count": 1,
+     "ducats": 15,
+     "tradable": true,
+     "market": "daikyu_prime_string",
+     "relics": [
+      {
+       "relic": "Lith C15",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith N19",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Lith S18",
+       "tier": "Lith",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo A15",
+       "tier": "Neo",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi A20",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      },
+      {
+       "relic": "Axi V12",
+       "tier": "Axi",
+       "chances": {
+        "Radiant": 16.67,
+        "Flawless": 20,
+        "Exceptional": 23.33,
+        "Intact": 25.33
+       },
+       "rarity": "Common",
+       "vaulted": true
+      }
+     ],
+     "otherDrops": []
+    },
+    {
+     "name": "Upper Limb",
+     "count": 1,
+     "ducats": 45,
+     "tradable": true,
+     "market": "daikyu_prime_upper_limb",
+     "relics": [
+      {
+       "relic": "Meso C11",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso E7",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso P16",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": true
+      },
+      {
+       "relic": "Meso Y2",
+       "tier": "Meso",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      },
+      {
+       "relic": "Neo C7",
+       "tier": "Neo",
+       "chances": {
+        "Intact": 11,
+        "Exceptional": 13,
+        "Flawless": 17,
+        "Radiant": 20
+       },
+       "rarity": "Uncommon",
+       "vaulted": false
+      }
+     ],
+     "otherDrops": []
+    }
+   ],
+   "resources": [],
+   "requiresItems": []
+  },
+  "Athodai": {
+   "name": "Athodai",
+   "category": "Secondary",
+   "type": "Pistol",
+   "description": "Reverse-engineered from propulsion tech this hand-cannon packs a kick. Weak Point kills trigger Overdrive, locking off secondary functions while maximizing your fire rate and ammo efficiency for a short time.",
+   "masteryReq": 10,
+   "image": "TnJetTurbinePistolWeapon.png",
+   "wikiImage": "https://wiki.warframe.com/images/Athodai.png?5f25a",
+   "wiki": "https://wiki.warframe.com/w/Athodai",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2020-08-01",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 30000,
+   "buildTime": 86400,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Venus/Beacon Shield Ring (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Bifrost Echo (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Falling Glory (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Luckless Expanse (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Orvin-Haarc (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Vesper Strait (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Barrel",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Venus/Beacon Shield Ring (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Bifrost Echo (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Falling Glory (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Luckless Expanse (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Orvin-Haarc (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Vesper Strait (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Receiver",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Venus/Beacon Shield Ring (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Bifrost Echo (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Falling Glory (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Luckless Expanse (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Orvin-Haarc (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Venus/Vesper Strait (Caches)",
+       "chance": 6.45,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 5,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Galariak Prime": {
+   "name": "Galariak Prime",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "Orokin-era Grineer plated their scythes with gold as a symbol of dedication to their Golden Lords. Gains a percentage of Critical Chance with each Status Type affecting the target.",
+   "masteryReq": 14,
+   "image": "GrnDrillScythe.png",
+   "wikiImage": "https://wiki.warframe.com/images/GalariakPrime.png?af707",
+   "wiki": "https://wiki.warframe.com/w/Galariak_Prime",
+   "isPrime": true,
+   "vaulted": false,
+   "releaseDate": "2025-12-10",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": null,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Dark Refractory, Deimos/Recall: Dactolyst (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Hunhullus (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Vanguard (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/The Guilty (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Blade",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Dark Refractory, Deimos/Recall: Dactolyst (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Hunhullus (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Vanguard (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/The Guilty (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Dark Refractory, Deimos/Recall: Dactolyst (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Hunhullus (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/Recall: Vanguard (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      },
+      {
+       "location": "Dark Refractory, Deimos/The Guilty (The Perita Rebellion)",
+       "chance": 5.71,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Orokin Cell",
+     "count": 10,
+     "image": "ComponentCell.png"
+    }
+   ],
+   "requiresItems": []
+  },
+  "Hespar": {
+   "name": "Hespar",
+   "category": "Melee",
+   "type": "Melee",
+   "description": "This Heavy Scythe echoes battles of another time. It is far more a weapon of sheer force than one of finesse.",
+   "masteryReq": 12,
+   "image": "DuviriHeavyScythe.png",
+   "wikiImage": "https://wiki.warframe.com/images/Hespar.png?d6897",
+   "wiki": "https://wiki.warframe.com/w/Hespar",
+   "isPrime": false,
+   "vaulted": false,
+   "releaseDate": "2022-04-27",
+   "maxRank": 30,
+   "xpPerRank": 100,
+   "masteryXP": 3000,
+   "buildPrice": 15000,
+   "buildTime": 43200,
+   "marketCost": 225,
+   "parts": [
+    {
+     "name": "Blueprint",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Zariman Ten Zero (Level  90 - 95 Zariman Bounty)",
+       "chance": 12.99,
+       "rarity": "Uncommon"
+      }
+     ]
+    },
+    {
+     "name": "Blade",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Zariman/Oro Works (Void Armageddon)",
+       "chance": 8.33,
+       "rarity": "Rare"
+      }
+     ]
+    },
+    {
+     "name": "Handle",
+     "count": 1,
+     "ducats": null,
+     "tradable": false,
+     "market": null,
+     "relics": [],
+     "otherDrops": [
+      {
+       "location": "Zariman/Tuvul Commons (Void Cascade)",
+       "chance": 8.33,
+       "rarity": "Rare"
+      }
+     ]
+    }
+   ],
+   "resources": [
+    {
+     "name": "Thrax Plasm",
+     "count": 50,
+     "image": "VoidWraithItem.png"
+    }
+   ],
+   "requiresItems": []
+  }
+ },
+ "nodes": {
+  "Hieracon (Pluto)": {
+   "name": "Hieracon",
+   "planet": "Pluto",
+   "mission": "Excavation",
+   "faction": "Infested",
+   "levels": "35-45",
+   "darkSector": true
+  },
+  "Outer Terminus (Pluto)": {
+   "name": "Outer Terminus",
+   "planet": "Pluto",
+   "mission": "Defense",
+   "faction": "Corpus",
+   "levels": "30-40",
+   "darkSector": false
+  },
+  "Cerberus (Pluto)": {
+   "name": "Cerberus",
+   "planet": "Pluto",
+   "mission": "Interception",
+   "faction": "Corpus",
+   "levels": "30-40",
+   "darkSector": false
+  },
+  "Cypress (Pluto)": {
+   "name": "Cypress",
+   "planet": "Pluto",
+   "mission": "Sabotage",
+   "faction": "Corpus",
+   "levels": "34-38",
+   "darkSector": false
+  },
+  "Oceanum (Pluto)": {
+   "name": "Oceanum",
+   "planet": "Pluto",
+   "mission": "Spy",
+   "faction": "Corpus",
+   "levels": "32-36",
+   "darkSector": false
+  },
+  "Minthe (Pluto)": {
+   "name": "Minthe",
+   "planet": "Pluto",
+   "mission": "Mobile Defense",
+   "faction": "Corpus",
+   "levels": "30-34",
+   "darkSector": false
+  },
+  "Acheron (Pluto)": {
+   "name": "Acheron",
+   "planet": "Pluto",
+   "mission": "Exterminate",
+   "faction": "Corpus",
+   "levels": "34-38",
+   "darkSector": false
+  },
+  "Kelashin (Neptune)": {
+   "name": "Kelashin",
+   "planet": "Neptune",
+   "mission": "Survival",
+   "faction": "Infested",
+   "levels": "30-40",
+   "darkSector": true
+  },
+  "Laomedeia (Neptune)": {
+   "name": "Laomedeia",
+   "planet": "Neptune",
+   "mission": "Disruption",
+   "faction": "Corpus",
+   "levels": "25-30",
+   "darkSector": false
+  },
+  "Sao (Neptune)": {
+   "name": "Sao",
+   "planet": "Neptune",
+   "mission": "Sabotage",
+   "faction": "Corpus",
+   "levels": "30-32",
+   "darkSector": false
+  },
+  "Salacia (Neptune)": {
+   "name": "Salacia",
+   "planet": "Neptune",
+   "mission": "Mobile Defense",
+   "faction": "Corpus",
+   "levels": "27-32",
+   "darkSector": false
+  },
+  "Yursa (Neptune)": {
+   "name": "Yursa",
+   "planet": "Neptune",
+   "mission": "Defection",
+   "faction": "Infested",
+   "levels": "30-40",
+   "darkSector": true
+  }
+ }
+}

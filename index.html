@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Road to Legendary 6</title>
+  <meta name="description" content="Public Warframe mastery tracker: everything left to master on the road to Legendary Rank 6.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 30 16 16 30 2 16Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 9 23 16 16 23 9 16Z" fill="currentColor"/></svg>
+        <div>
+          <h1 id="title">Road to Legendary 6</h1>
+          <p class="sub" id="subtitle">Mastery tracker</p>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor"/></svg>
+      </button>
+    </div>
+    <nav class="wrap tabs" id="tabs" role="tablist">
+      <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+      <button role="tab" data-tab="gear">Gear</button>
+      <button role="tab" data-tab="starchart">Star Chart</button>
+      <button role="tab" data-tab="primes">Prime Parts</button>
+      <button role="tab" data-tab="relics">Relic Planner</button>
+      <button role="tab" data-tab="mastered">Mastered</button>
+      <button role="tab" data-tab="tips">Tips</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="overview" class="panel active"></section>
+    <section id="gear" class="panel"></section>
+    <section id="starchart" class="panel"></section>
+    <section id="primes" class="panel"></section>
+    <section id="relics" class="panel"></section>
+    <section id="mastered" class="panel"></section>
+    <section id="tips" class="panel"></section>
+  </main>
+
+  <footer class="wrap site-footer">
+    <p>Item, relic and drop data from the community <a href="https://github.com/WFCD/warframe-items" target="_blank" rel="noopener">WFCD warframe-items</a> dataset (built <span id="dataDate"></span>). Images via <a href="https://warframestat.us" target="_blank" rel="noopener">warframestat.us</a> / the <a href="https://wiki.warframe.com" target="_blank" rel="noopener">Warframe Wiki</a>. Not affiliated with Digital Extremes.</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
