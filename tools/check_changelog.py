@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Fail unless a push bumps VERSION and adds a matching CHANGELOG.md entry.
+"""Fail unless a push bumps VERSION, adds a matching CHANGELOG.md entry with an
+"Author:" line, and starts every commit message with the version (e.g. "v1.4.0: ...").
 
 Usage: python3 tools/check_changelog.py [BASE_SHA]
 With no BASE_SHA (or an all-zero one, e.g. a brand-new branch) only the
@@ -10,6 +11,7 @@ import subprocess
 import sys
 
 HEADING = re.compile(r"^## v(\d+\.\d+\.\d+) - (\d{4}-\d{2}-\d{2})\s*$", re.M)
+SUBJECT = re.compile(r"^v(\d+\.\d+\.\d+):? ")
 
 
 def parse(v):
@@ -25,11 +27,17 @@ def main():
     version = open("VERSION").read().strip()
     if not re.fullmatch(r"\d+\.\d+\.\d+", version):
         errors.append(f"VERSION must look like 1.2.3, got {version!r}")
-    headings = HEADING.findall(open("CHANGELOG.md").read())
+    changelog = open("CHANGELOG.md").read()
+    headings = HEADING.findall(changelog)
     if not headings:
         errors.append("CHANGELOG.md has no '## vX.Y.Z - YYYY-MM-DD' sections")
     elif headings[0][0] != version:
         errors.append(f"Top CHANGELOG.md entry is v{headings[0][0]} but VERSION is {version}")
+    if headings:
+        top = HEADING.search(changelog)
+        body = changelog[top.end():].lstrip("\n").split("\n", 1)[0]
+        if not re.match(r"^Author: \S", body):
+            errors.append(f"The v{headings[0][0]} entry must start with an 'Author: <name>' line")
 
     base = sys.argv[1] if len(sys.argv) > 1 else ""
     if base and set(base) != {"0"}:
@@ -37,6 +45,12 @@ def main():
         if changed:
             if "CHANGELOG.md" not in changed:
                 errors.append("This push changes files but does not update CHANGELOG.md")
+            subjects = [l for l in git("log", "--no-merges", "--format=%s", f"{base}..HEAD").splitlines() if l]
+            for subj in subjects:
+                if not SUBJECT.match(subj):
+                    errors.append(f"Commit message must start with the version (e.g. 'v{version}: ...'): {subj!r}")
+            if subjects and SUBJECT.match(subjects[0]) and SUBJECT.match(subjects[0]).group(1) != version:
+                errors.append(f"Latest commit is labelled v{SUBJECT.match(subjects[0]).group(1)} but VERSION is {version}")
             if "VERSION" not in changed:
                 errors.append("This push changes files but does not bump VERSION")
             else:

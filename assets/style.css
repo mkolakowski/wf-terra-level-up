@@ -211,3 +211,4 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .version-tag { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85rem; padding: 2px 8px; border-radius: 6px; background: var(--card-2); border: 1px solid var(--line); }
 .version-tag.current { color: var(--bg); background: var(--gold); border-color: var(--gold); }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; background: var(--card-2); padding: 1px 5px; border-radius: 4px; }
+.log-author { color: var(--muted); font-size: .82rem; margin-top: -2px; }

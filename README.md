@@ -40,6 +40,8 @@ Every push must bump [`VERSION`](VERSION) (`MAJOR.MINOR.PATCH`) and add a matchi
 - **PATCH** - fixes and progress/data updates
 - **MAJOR** - redesigns or a new goal
 
+Each entry starts with an `Author: <name>` line, and every commit message starts with the version (e.g. `v1.4.0: Add relic planner filters`).
+
 The deploy workflow runs `tools/check_changelog.py` first and won't publish without it. The version shows in the site header and the Changelog tab renders `CHANGELOG.md`.
 
 ## Deploying

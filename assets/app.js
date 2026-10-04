@@ -520,7 +520,9 @@
     const sections = [];
     md.split('\n').forEach((line) => {
       const h = line.match(/^## v(\S+) - (\S+)/);
-      if (h) sections.push({ version: h[1], date: h[2], items: [] });
+      const a = line.match(/^Author: (.+)/);
+      if (h) sections.push({ version: h[1], date: h[2], author: '', items: [] });
+      else if (a && sections.length) sections[sections.length - 1].author = a[1].trim();
       else if (sections.length && /^- /.test(line)) sections[sections.length - 1].items.push(line.slice(2));
     });
     $('#changelog').innerHTML = sections.length ? `
@@ -528,6 +530,7 @@
       <div class="log">${sections.map((s, i) => `
         <div class="log-entry">
           <h3><span class="version-tag${i === 0 ? ' current' : ''}">v${esc(s.version)}</span> <span class="muted small">${esc(s.date)}</span></h3>
+          ${s.author ? `<div class="log-author">by ${esc(s.author)}</div>` : ''}
           <ul>${s.items.map((it) => `<li>${inline(it)}</li>`).join('')}</ul>
         </div>`).join('')}</div>` : '<div class="empty">No changelog yet.</div>';
   }
