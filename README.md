@@ -32,6 +32,16 @@ python3 tools/build_data.py /tmp/wfcd/package
 
 Re-running it also refreshes relic tables and vault status after a Prime Access / vault rotation.
 
+## Versioning & changelog
+
+Every push must bump [`VERSION`](VERSION) (`MAJOR.MINOR.PATCH`) and add a matching `## vX.Y.Z - YYYY-MM-DD` entry at the top of [`CHANGELOG.md`](CHANGELOG.md):
+
+- **MINOR** - features / site or code changes
+- **PATCH** - fixes and progress/data updates
+- **MAJOR** - redesigns or a new goal
+
+The deploy workflow runs `tools/check_changelog.py` first and won't publish without it. The version shows in the site header and the Changelog tab renders `CHANGELOG.md`.
+
 ## Deploying
 
 `.github/workflows/pages.yml` publishes the repo root to GitHub Pages on every push to `main` (or this working branch). In the repo settings, set **Pages → Build and deployment → Source** to **GitHub Actions** once.

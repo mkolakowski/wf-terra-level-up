@@ -511,6 +511,27 @@
       </div>`;
   }
 
+  // ---------- render: changelog ----------
+  // Minimal renderer for CHANGELOG.md: "## vX.Y.Z - date" headings and "- " bullets
+  function inline(md) {
+    return esc(md).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<code>$1</code>');
+  }
+  function renderChangelog(md) {
+    const sections = [];
+    md.split('\n').forEach((line) => {
+      const h = line.match(/^## v(\S+) - (\S+)/);
+      if (h) sections.push({ version: h[1], date: h[2], items: [] });
+      else if (sections.length && /^- /.test(line)) sections[sections.length - 1].items.push(line.slice(2));
+    });
+    $('#changelog').innerHTML = sections.length ? `
+      <p class="muted">Every update gets a new version. Feature changes bump the middle number, progress updates and fixes bump the last.</p>
+      <div class="log">${sections.map((s, i) => `
+        <div class="log-entry">
+          <h3><span class="version-tag${i === 0 ? ' current' : ''}">v${esc(s.version)}</span> <span class="muted small">${esc(s.date)}</span></h3>
+          <ul>${s.items.map((it) => `<li>${inline(it)}</li>`).join('')}</ul>
+        </div>`).join('')}</div>` : '<div class="empty">No changelog yet.</div>';
+  }
+
   // ---------- tabs / theme ----------
   function selectTab(name) {
     document.querySelectorAll('#tabs [role="tab"]').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === name)));
@@ -521,6 +542,7 @@
     const b = e.target.closest('[data-tab]');
     if (b) selectTab(b.dataset.tab);
   });
+  $('#version').addEventListener('click', (e) => { e.preventDefault(); selectTab('changelog'); });
   $('#themeToggle').addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
     document.documentElement.dataset.theme = next;
@@ -530,6 +552,11 @@
   // ---------- boot ----------
   async function load() {
     const get = (u) => fetch(u, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
+    const text = (u) => fetch(u, { cache: 'no-cache' }).then((r) => (r.ok ? r.text() : '')).catch(() => '');
+    Promise.all([text('VERSION'), text('CHANGELOG.md')]).then(([v, md]) => {
+      if (v.trim()) $('#version').textContent = 'v' + v.trim();
+      renderChangelog(md);
+    });
     try {
       [tracker, data] = await Promise.all([get('data/tracker.json'), get('data/items.json')]);
     } catch (err) {
