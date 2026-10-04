@@ -5010,6 +5010,502 @@
   }
  },
  "nodes": {
+  "Syrtis (Mars)": {
+   "name": "Syrtis",
+   "planet": "Mars",
+   "mission": "Exterminate",
+   "faction": "Grineer",
+   "levels": "8-13",
+   "darkSector": false
+  },
+  "Ultor (Mars)": {
+   "name": "Ultor",
+   "planet": "Mars",
+   "mission": "Exterminate",
+   "faction": "Corpus",
+   "levels": "11-13",
+   "darkSector": false
+  },
+  "Gradivus (Mars)": {
+   "name": "Gradivus",
+   "planet": "Mars",
+   "mission": "Sabotage",
+   "faction": "Corpus",
+   "levels": "9-12",
+   "darkSector": false
+  },
+  "Arval (Mars)": {
+   "name": "Arval",
+   "planet": "Mars",
+   "mission": "Spy",
+   "faction": "Grineer",
+   "levels": "9-11",
+   "darkSector": false
+  },
+  "War (Mars)": {
+   "name": "War",
+   "planet": "Mars",
+   "mission": "Assassination",
+   "faction": "Grineer",
+   "levels": "11-13",
+   "darkSector": false
+  },
+  "Wahiba (Mars)": {
+   "name": "Wahiba",
+   "planet": "Mars",
+   "mission": "Survival",
+   "faction": "Infested",
+   "levels": "10-20",
+   "darkSector": true
+  },
+  "Kadesh (Mars)": {
+   "name": "Kadesh",
+   "planet": "Mars",
+   "mission": "Defense",
+   "faction": "Infested",
+   "levels": "10-20",
+   "darkSector": true
+  },
+  "Formido (Deimos)": {
+   "name": "Formido",
+   "planet": "Deimos",
+   "mission": "Sabotage",
+   "faction": "Infested",
+   "levels": "14-16",
+   "darkSector": false
+  },
+  "Munio (Deimos)": {
+   "name": "Munio",
+   "planet": "Deimos",
+   "mission": "Defense",
+   "faction": "Murmur",
+   "levels": "55-60",
+   "darkSector": false
+  },
+  "Kiste (Ceres)": {
+   "name": "Kiste",
+   "planet": "Ceres",
+   "mission": "Mobile Defense",
+   "faction": "Grineer",
+   "levels": "13-15",
+   "darkSector": false
+  },
+  "Cinxia (Ceres)": {
+   "name": "Cinxia",
+   "planet": "Ceres",
+   "mission": "Interception",
+   "faction": "Grineer",
+   "levels": "12-17",
+   "darkSector": false
+  },
+  "Nuovo (Ceres)": {
+   "name": "Nuovo",
+   "planet": "Ceres",
+   "mission": "Rescue",
+   "faction": "Grineer",
+   "levels": "13-15",
+   "darkSector": false
+  },
+  "Bode (Ceres)": {
+   "name": "Bode",
+   "planet": "Ceres",
+   "mission": "Spy",
+   "faction": "Grineer",
+   "levels": "12-14",
+   "darkSector": false
+  },
+  "Ludi (Ceres)": {
+   "name": "Ludi",
+   "planet": "Ceres",
+   "mission": "Hijack",
+   "faction": "Grineer",
+   "levels": "15-17",
+   "darkSector": false
+  },
+  "Abyssal Zone (Ceres)": {
+   "name": "Abyssal Zone",
+   "planet": "Ceres",
+   "mission": "Abyssal Zone",
+   "faction": "Orokin",
+   "levels": null,
+   "darkSector": false
+  },
+  "Thon (Ceres)": {
+   "name": "Thon",
+   "planet": "Ceres",
+   "mission": "Sabotage",
+   "faction": "Grineer",
+   "levels": "15-17",
+   "darkSector": false
+  },
+  "Carme (Jupiter)": {
+   "name": "Carme",
+   "planet": "Jupiter",
+   "mission": "Mobile Defense",
+   "faction": "Corpus",
+   "levels": "16-18",
+   "darkSector": false
+  },
+  "Metis (Jupiter)": {
+   "name": "Metis",
+   "planet": "Jupiter",
+   "mission": "Rescue",
+   "faction": "Corpus",
+   "levels": "15-17",
+   "darkSector": false
+  },
+  "Callisto (Jupiter)": {
+   "name": "Callisto",
+   "planet": "Jupiter",
+   "mission": "Interception",
+   "faction": "Corpus",
+   "levels": "15-20",
+   "darkSector": false
+  },
+  "Amalthea (Jupiter)": {
+   "name": "Amalthea",
+   "planet": "Jupiter",
+   "mission": "Spy",
+   "faction": "Corpus",
+   "levels": "17-19",
+   "darkSector": false
+  },
+  "Thebe (Jupiter)": {
+   "name": "Thebe",
+   "planet": "Jupiter",
+   "mission": "Sabotage",
+   "faction": "Corpus",
+   "levels": "18-20",
+   "darkSector": false
+  },
+  "Ganymede (Jupiter)": {
+   "name": "Ganymede",
+   "planet": "Jupiter",
+   "mission": "Disruption",
+   "faction": "Corpus",
+   "levels": "30-35",
+   "darkSector": false
+  },
+  "Io (Jupiter)": {
+   "name": "Io",
+   "planet": "Jupiter",
+   "mission": "Defense",
+   "faction": "Corpus",
+   "levels": "15-20",
+   "darkSector": false
+  },
+  "Adrastea (Jupiter)": {
+   "name": "Adrastea",
+   "planet": "Jupiter",
+   "mission": "Sabotage",
+   "faction": "Corpus",
+   "levels": "18-20",
+   "darkSector": false
+  },
+  "Ananke (Jupiter)": {
+   "name": "Ananke",
+   "planet": "Jupiter",
+   "mission": "Capture",
+   "faction": "Corpus",
+   "levels": "16-18",
+   "darkSector": false
+  },
+  "The Ropalolyst (Jupiter)": {
+   "name": "The Ropalolyst",
+   "planet": "Jupiter",
+   "mission": "Assassination",
+   "faction": "Sentient",
+   "levels": "40-40",
+   "darkSector": false
+  },
+  "Galilea (Jupiter)": {
+   "name": "Galilea",
+   "planet": "Jupiter",
+   "mission": "Sabotage",
+   "faction": "Corpus",
+   "levels": "15-20",
+   "darkSector": false
+  },
+  "Cholistan (Europa)": {
+   "name": "Cholistan",
+   "planet": "Europa",
+   "mission": "Excavation",
+   "faction": "Infested",
+   "levels": "23-33",
+   "darkSector": true
+  },
+  "Orias (Europa)": {
+   "name": "Orias",
+   "planet": "Europa",
+   "mission": "Rescue",
+   "faction": "Corpus",
+   "levels": "20-22",
+   "darkSector": false
+  },
+  "Valefor (Europa)": {
+   "name": "Valefor",
+   "planet": "Europa",
+   "mission": "Excavation",
+   "faction": "Corpus",
+   "levels": "18-23",
+   "darkSector": false
+  },
+  "Icefields of Riddah (Europa)": {
+   "name": "Icefields of Riddah",
+   "planet": "Europa",
+   "mission": "See wiki",
+   "faction": "",
+   "levels": null,
+   "darkSector": false
+  },
+  "Mines of Karishh (Europa)": {
+   "name": "Mines of Karishh",
+   "planet": "Europa",
+   "mission": "See wiki",
+   "faction": "",
+   "levels": null,
+   "darkSector": false
+  },
+  "Archaeo-Freighter (Europa)": {
+   "name": "Archaeo-Freighter",
+   "planet": "Europa",
+   "mission": "See wiki",
+   "faction": "",
+   "levels": null,
+   "darkSector": false
+  },
+  "Sorath (Europa)": {
+   "name": "Sorath",
+   "planet": "Europa",
+   "mission": "Hijack",
+   "faction": "Corpus",
+   "levels": "19-21",
+   "darkSector": false
+  },
+  "Valac (Europa)": {
+   "name": "Valac",
+   "planet": "Europa",
+   "mission": "Spy",
+   "faction": "Infested",
+   "levels": "18-20",
+   "darkSector": false
+  },
+  "Kokabiel (Europa)": {
+   "name": "Kokabiel",
+   "planet": "Europa",
+   "mission": "Sabotage",
+   "faction": "Corpus",
+   "levels": "20-22",
+   "darkSector": false
+  },
+  "Abaddon (Europa)": {
+   "name": "Abaddon",
+   "planet": "Europa",
+   "mission": "Capture",
+   "faction": "Corpus",
+   "levels": "21-23",
+   "darkSector": false
+  },
+  "Larzac (Europa)": {
+   "name": "Larzac",
+   "planet": "Europa",
+   "mission": "Defense",
+   "faction": "Infested",
+   "levels": "23-33",
+   "darkSector": true
+  },
+  "Naamah (Europa)": {
+   "name": "Naamah",
+   "planet": "Europa",
+   "mission": "Assassination",
+   "faction": "Corpus",
+   "levels": "21-23",
+   "darkSector": false
+  },
+  "Armaros (Europa)": {
+   "name": "Armaros",
+   "planet": "Europa",
+   "mission": "Exterminate",
+   "faction": "Infested",
+   "levels": "18-20",
+   "darkSector": false
+  },
+  "Cassini (Saturn)": {
+   "name": "Cassini",
+   "planet": "Saturn",
+   "mission": "Capture",
+   "faction": "Grineer",
+   "levels": "21-23",
+   "darkSector": false
+  },
+  "Dione (Saturn)": {
+   "name": "Dione",
+   "planet": "Saturn",
+   "mission": "Spy",
+   "faction": "Grineer",
+   "levels": "21-23",
+   "darkSector": false
+  },
+  "Pandora (Saturn)": {
+   "name": "Pandora",
+   "planet": "Saturn",
+   "mission": "Pursuit",
+   "faction": "Grineer",
+   "levels": "21-23",
+   "darkSector": false
+  },
+  "Rhea (Saturn)": {
+   "name": "Rhea",
+   "planet": "Saturn",
+   "mission": "Interception",
+   "faction": "Grineer",
+   "levels": "21-26",
+   "darkSector": false
+  },
+  "Calypso (Saturn)": {
+   "name": "Calypso",
+   "planet": "Saturn",
+   "mission": "Sabotage",
+   "faction": "Grineer",
+   "levels": "24-26",
+   "darkSector": false
+  },
+  "Caracol (Saturn)": {
+   "name": "Caracol",
+   "planet": "Saturn",
+   "mission": "Defection",
+   "faction": "Infested",
+   "levels": "26-36",
+   "darkSector": true
+  },
+  "Cressida (Uranus)": {
+   "name": "Cressida",
+   "planet": "Uranus",
+   "mission": "Mobile Defense",
+   "faction": "Grineer",
+   "levels": "27-29",
+   "darkSector": false
+  },
+  "Desdemona (Uranus)": {
+   "name": "Desdemona",
+   "planet": "Uranus",
+   "mission": "Sabotage",
+   "faction": "Grineer",
+   "levels": "26-28",
+   "darkSector": false
+  },
+  "Rosalind (Uranus)": {
+   "name": "Rosalind",
+   "planet": "Uranus",
+   "mission": "Spy",
+   "faction": "Grineer",
+   "levels": "27-29",
+   "darkSector": false
+  },
+  "Umbriel (Uranus)": {
+   "name": "Umbriel",
+   "planet": "Uranus",
+   "mission": "Interception",
+   "faction": "Grineer",
+   "levels": "24-29",
+   "darkSector": false
+  },
+  "Caliban (Uranus)": {
+   "name": "Caliban",
+   "planet": "Uranus",
+   "mission": "Rescue",
+   "faction": "Grineer",
+   "levels": "25-27",
+   "darkSector": false
+  },
+  "Puck (Uranus)": {
+   "name": "Puck",
+   "planet": "Uranus",
+   "mission": "Exterminate",
+   "faction": "Grineer",
+   "levels": "27-29",
+   "darkSector": false
+  },
+  "Caelus (Uranus)": {
+   "name": "Caelus",
+   "planet": "Uranus",
+   "mission": "Interception",
+   "faction": "Grineer",
+   "levels": "24-29",
+   "darkSector": false
+  },
+  "Ariel (Uranus)": {
+   "name": "Ariel",
+   "planet": "Uranus",
+   "mission": "Capture",
+   "faction": "Grineer",
+   "levels": "25-27",
+   "darkSector": false
+  },
+  "Sycorax (Uranus)": {
+   "name": "Sycorax",
+   "planet": "Uranus",
+   "mission": "Exterminate",
+   "faction": "Grineer",
+   "levels": "24-26",
+   "darkSector": false
+  },
+  "Ophelia (Uranus)": {
+   "name": "Ophelia",
+   "planet": "Uranus",
+   "mission": "Survival",
+   "faction": "Grineer",
+   "levels": "24-29",
+   "darkSector": false
+  },
+  "Assur (Uranus)": {
+   "name": "Assur",
+   "planet": "Uranus",
+   "mission": "Survival",
+   "faction": "Infested",
+   "levels": "25-35",
+   "darkSector": true
+  },
+  "Kelashin (Neptune)": {
+   "name": "Kelashin",
+   "planet": "Neptune",
+   "mission": "Survival",
+   "faction": "Infested",
+   "levels": "30-40",
+   "darkSector": true
+  },
+  "Laomedeia (Neptune)": {
+   "name": "Laomedeia",
+   "planet": "Neptune",
+   "mission": "Disruption",
+   "faction": "Corpus",
+   "levels": "25-30",
+   "darkSector": false
+  },
+  "Sao (Neptune)": {
+   "name": "Sao",
+   "planet": "Neptune",
+   "mission": "Sabotage",
+   "faction": "Corpus",
+   "levels": "30-32",
+   "darkSector": false
+  },
+  "Salacia (Neptune)": {
+   "name": "Salacia",
+   "planet": "Neptune",
+   "mission": "Mobile Defense",
+   "faction": "Corpus",
+   "levels": "27-32",
+   "darkSector": false
+  },
+  "Yursa (Neptune)": {
+   "name": "Yursa",
+   "planet": "Neptune",
+   "mission": "Defection",
+   "faction": "Infested",
+   "levels": "30-40",
+   "darkSector": true
+  },
   "Hieracon (Pluto)": {
    "name": "Hieracon",
    "planet": "Pluto",
@@ -5066,45 +5562,133 @@
    "levels": "34-38",
    "darkSector": false
   },
-  "Kelashin (Neptune)": {
-   "name": "Kelashin",
-   "planet": "Neptune",
+  "Kappa (Sedna)": {
+   "name": "Kappa",
+   "planet": "Sedna",
+   "mission": "Disruption",
+   "faction": "Grineer",
+   "levels": "34-38",
+   "darkSector": false
+  },
+  "Berehynia (Sedna)": {
+   "name": "Berehynia",
+   "planet": "Sedna",
+   "mission": "Interception",
+   "faction": "Grineer",
+   "levels": "30-40",
+   "darkSector": false
+  },
+  "Marid (Sedna)": {
+   "name": "Marid",
+   "planet": "Sedna",
+   "mission": "Hijack",
+   "faction": "Grineer",
+   "levels": "34-38",
+   "darkSector": false
+  },
+  "Kelpie (Sedna)": {
+   "name": "Kelpie",
+   "planet": "Sedna",
+   "mission": "Spy",
+   "faction": "Grineer",
+   "levels": "35-40",
+   "darkSector": false
+  },
+  "Sangeru (Sedna)": {
+   "name": "Sangeru",
+   "planet": "Sedna",
+   "mission": "Defense",
+   "faction": "Infested",
+   "levels": "35-45",
+   "darkSector": true
+  },
+  "Merrow (Sedna)": {
+   "name": "Merrow",
+   "planet": "Sedna",
+   "mission": "Assassination",
+   "faction": "Grineer",
+   "levels": "35-40",
+   "darkSector": false
+  },
+  "Nakki (Sedna)": {
+   "name": "Nakki",
+   "planet": "Sedna",
+   "mission": "Arena",
+   "faction": "Grineer",
+   "levels": "40-40",
+   "darkSector": false
+  },
+  "Yam (Sedna)": {
+   "name": "Yam",
+   "planet": "Sedna",
+   "mission": "Arena",
+   "faction": "Grineer",
+   "levels": "60-60",
+   "darkSector": false
+  },
+  "Vodyanoi (Sedna)": {
+   "name": "Vodyanoi",
+   "planet": "Sedna",
+   "mission": "Arena",
+   "faction": "Grineer",
+   "levels": "85-85",
+   "darkSector": false
+  },
+  "Saxis (Eris)": {
+   "name": "Saxis",
+   "planet": "Eris",
+   "mission": "Exterminate",
+   "faction": "Infested",
+   "levels": "34-38",
+   "darkSector": false
+  },
+  "Kala-Azar (Eris)": {
+   "name": "Kala-Azar",
+   "planet": "Eris",
+   "mission": "Defense",
+   "faction": "Infested",
+   "levels": "30-40",
+   "darkSector": false
+  },
+  "Naeglar (Eris)": {
+   "name": "Naeglar",
+   "planet": "Eris",
+   "mission": "Hive",
+   "faction": "Infested",
+   "levels": "30-34",
+   "darkSector": false
+  },
+  "Xini (Eris)": {
+   "name": "Xini",
+   "planet": "Eris",
+   "mission": "Interception",
+   "faction": "Infested",
+   "levels": "30-40",
+   "darkSector": false
+  },
+  "Zabala (Eris)": {
+   "name": "Zabala",
+   "planet": "Eris",
    "mission": "Survival",
    "faction": "Infested",
-   "levels": "30-40",
+   "levels": "35-45",
    "darkSector": true
   },
-  "Laomedeia (Neptune)": {
-   "name": "Laomedeia",
-   "planet": "Neptune",
-   "mission": "Disruption",
-   "faction": "Corpus",
-   "levels": "25-30",
-   "darkSector": false
-  },
-  "Sao (Neptune)": {
-   "name": "Sao",
-   "planet": "Neptune",
-   "mission": "Sabotage",
-   "faction": "Corpus",
-   "levels": "30-32",
-   "darkSector": false
-  },
-  "Salacia (Neptune)": {
-   "name": "Salacia",
-   "planet": "Neptune",
-   "mission": "Mobile Defense",
-   "faction": "Corpus",
-   "levels": "27-32",
-   "darkSector": false
-  },
-  "Yursa (Neptune)": {
-   "name": "Yursa",
-   "planet": "Neptune",
-   "mission": "Defection",
+  "Mutalist Alad V Assassinate (Eris)": {
+   "name": "Mutalist Alad V Assassinate",
+   "planet": "Eris",
+   "mission": "Assassination",
    "faction": "Infested",
-   "levels": "30-40",
-   "darkSector": true
+   "levels": null,
+   "darkSector": false
+  },
+  "Jordas Golem Assassinate (Eris)": {
+   "name": "Jordas Golem Assassinate",
+   "planet": "Eris",
+   "mission": "Archwing Assassination",
+   "faction": "Infested",
+   "levels": null,
+   "darkSector": false
   }
  }
 }

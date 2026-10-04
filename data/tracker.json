@@ -4,64 +4,579 @@
     "founder": "Hunter",
     "goal": "Legendary 6",
     "goalXP": 3135000,
-    "currentXP": null,
-    "currentRankLabel": null
+    "currentXP": 3069712,
+    "currentRankLabel": "Legendary 5",
+    "chartMode": "Steel Path"
   },
   "lastUpdated": "2026-10-04",
   "items": [
-    { "name": "Narin", "rank": 23, "owned": true, "tip": "Already built and at rank 23 - only 7 ranks left. Bring Narin into any Steel Path or Zariman mission and she'll be done in a run or two." },
-    { "name": "Kuva Ghoulsaw", "rank": 30, "owned": true, "tip": "Kuva weapons go past 30. Each Forma raises the max rank by 2, so it takes 5 Forma total to reach rank 40. Mastery is based on the highest rank it ever reached, so level it back up after each Forma. Worth 4,000 XP at rank 40." },
-    { "name": "Sagek Prime", "tip": "A Grineer-made prime, not a relic prime: every part drops from The Perita Rebellion missions in the Dark Refractory on Deimos (about 5.7% per part). Farm it alongside Galariak Prime - same missions." },
-    { "name": "Akarius", "tip": "Blueprint drops from Demolisher units in Disruption missions (Kappa on Sedna and Apollo on Lua are popular). Also needs Hexenon (Jupiter), Nano Spores and Neurodes." },
-    { "name": "Afentis Prime" },
-    { "name": "Lato Vandal", "tip": "All parts drop from Elite Sanctuary Onslaught (Simaris, Sanctuary on the Relay). Pick a fast nuke frame and push to rotation C." },
-    { "name": "Akmagnus Prime", "tip": "Needs 2x Magnus Prime as ingredients - build them first; Magnus Prime counts for mastery too if it isn't already mastered." },
-    { "name": "Sarofang Prime" },
-    { "name": "Athodai Prime" },
-    { "name": "Wrath", "tip": "Orion's heavy scythe. Parts drop from Railjack Skirmish missions in the Uranus Proxima." },
-    { "name": "Vadarya Prime" },
-    { "name": "Twin Kohmak", "tip": "Blueprint drops from Kela De Thaym (Merrow, Sedna). Also needs 2x Kohmak (blueprint in the Market) and a Forma - Kohmak is extra mastery if it isn't mastered yet." },
-    { "name": "Pride", "tip": "Sirius' heavy scythe. Parts drop from Railjack Skirmish missions in the Uranus Proxima." },
-    { "name": "Styanax Prime", "rank": 0, "owned": true, "tip": "Already owned - just needs leveling. 6,000 XP sitting in the arsenal." },
-    { "name": "Corvas Prime", "tip": "Arch-gun. Can be leveled in Archwing missions or on the Plains / Orb Vallis / Cambion Drift with the Archgun Deployer gear item." },
-    { "name": "Corufell Prime", "tip": "Arch-melee - level it in Archwing missions (e.g. Railjack, Archwing nodes on the star chart)." },
-    { "name": "Kestrel Prime" },
-    { "name": "Braton Vandal", "tip": "All parts drop from Elite Sanctuary Onslaught - farm it together with the Lato Vandal." },
-    { "name": "Cinta", "tip": "Duviri weapon - check the wiki for the current Acrithis / Circuit rotation that sells the parts." },
-    { "name": "Perigale Prime" },
-    { "name": "Citrine Prime" },
-    { "name": "Haalvu", "tip": "Sentient multi-barrel rifle added in July 2026 - see the wiki link for how to get it." },
-    { "name": "Thornbak", "tip": "Free reward from The Teacher quest - comes with its own slot and a pre-installed Orokin Catalyst." },
-    { "name": "Gyre Prime" },
-    { "name": "Akvasto Prime", "tip": "Needs 2x Vasto Prime as ingredients (also vaulted) - check Varzia's rotation or buy the set on warframe.market." },
-    { "name": "Steflos Prime" },
-    { "name": "Venato", "tip": "Caliban's signature scythe. The blueprint is in the Market. Needs Exceptional Sentient Cores and Anomaly Shards (Sentient anomaly in the Veil), Iradite and Narmer Isoplast." },
-    { "name": "Voruna Prime" },
-    { "name": "Morgha", "tip": "Arch-gun. Blueprint comes from Necraloid on Deimos (Clearance: Odima). Level it with the Archgun Deployer in open worlds." },
-    { "name": "Alternox Prime" },
-    { "name": "Feverspine", "tip": "Infested K-Drive (Velocipod) deck from the Entrati in the Necralisk on Deimos. A K-Drive counts like a Warframe (6,000 XP) - level it by doing tricks on the Cambion Drift." },
-    { "name": "Sporothrix", "tip": "Parts drop from the level 50-60 Isolation Vaults on the Cambion Drift. Necraloid also sells them." },
-    { "name": "Korrudo", "tip": "Blueprint drops from Thumpers on the Plains of Eidolon (Narmer / Tusk Thumper Bull & Doma). Needs Mawfish Bones (fishing) and Breath of the Eidolon." },
-    { "name": "Spectra Vandal", "tip": "All parts come from Railjack caches in the Veil Proxima." },
-    { "name": "Venato Prime" },
-    { "name": "Arum Spinosa", "tip": "Parts drop from the level 40-50 Isolation Vaults on the Cambion Drift. Necraloid (Clearance: Modus) also sells them." },
-    { "name": "Daikyu Prime" },
-    { "name": "Athodai", "tip": "All parts come from Railjack caches in the Venus Proxima." },
-    { "name": "Galariak Prime", "tip": "Grineer-made prime, not a relic prime: parts drop from The Perita Rebellion missions in the Dark Refractory on Deimos - same farm as Sagek Prime." },
-    { "name": "Hespar", "tip": "Zariman heavy scythe. Blueprint from the level 90-95 Zariman bounty; blade and handle drop from Void Armageddon / Void Cascade." }
+    {
+      "name": "Narin",
+      "rank": 23,
+      "owned": true,
+      "tip": "Already built and at rank 23 - only 7 ranks left. Bring Narin into any Steel Path or Zariman mission and she'll be done in a run or two."
+    },
+    {
+      "name": "Kuva Ghoulsaw",
+      "rank": 30,
+      "owned": true,
+      "tip": "Kuva weapons go past 30. Each Forma raises the max rank by 2, so it takes 5 Forma total to reach rank 40. Mastery is based on the highest rank it ever reached, so level it back up after each Forma. Worth 4,000 XP at rank 40."
+    },
+    {
+      "name": "Sagek Prime",
+      "tip": "A Grineer-made prime, not a relic prime: every part drops from The Perita Rebellion missions in the Dark Refractory on Deimos (about 5.7% per part). Farm it alongside Galariak Prime - same missions."
+    },
+    {
+      "name": "Akarius",
+      "tip": "Blueprint drops from Demolisher units in Disruption missions (Kappa on Sedna and Apollo on Lua are popular). Also needs Hexenon (Jupiter), Nano Spores and Neurodes."
+    },
+    {
+      "name": "Afentis Prime"
+    },
+    {
+      "name": "Lato Vandal",
+      "tip": "All parts drop from Elite Sanctuary Onslaught (Simaris, Sanctuary on the Relay). Pick a fast nuke frame and push to rotation C."
+    },
+    {
+      "name": "Akmagnus Prime",
+      "tip": "Needs 2x Magnus Prime as ingredients - build them first; Magnus Prime counts for mastery too if it isn't already mastered."
+    },
+    {
+      "name": "Sarofang Prime"
+    },
+    {
+      "name": "Athodai Prime"
+    },
+    {
+      "name": "Wrath",
+      "tip": "Orion's heavy scythe. Parts drop from Railjack Skirmish missions in the Uranus Proxima."
+    },
+    {
+      "name": "Vadarya Prime"
+    },
+    {
+      "name": "Twin Kohmak",
+      "tip": "Blueprint drops from Kela De Thaym (Merrow, Sedna). Also needs 2x Kohmak (blueprint in the Market) and a Forma - Kohmak is extra mastery if it isn't mastered yet.",
+      "effort": 3
+    },
+    {
+      "name": "Pride",
+      "tip": "Sirius' heavy scythe. Parts drop from Railjack Skirmish missions in the Uranus Proxima."
+    },
+    {
+      "name": "Styanax Prime",
+      "rank": 0,
+      "owned": true,
+      "tip": "Already owned - just needs leveling. 6,000 XP sitting in the arsenal."
+    },
+    {
+      "name": "Corvas Prime",
+      "tip": "Arch-gun. Can be leveled in Archwing missions or on the Plains / Orb Vallis / Cambion Drift with the Archgun Deployer gear item."
+    },
+    {
+      "name": "Corufell Prime",
+      "tip": "Arch-melee - level it in Archwing missions (e.g. Railjack, Archwing nodes on the star chart)."
+    },
+    {
+      "name": "Kestrel Prime"
+    },
+    {
+      "name": "Braton Vandal",
+      "tip": "All parts drop from Elite Sanctuary Onslaught - farm it together with the Lato Vandal."
+    },
+    {
+      "name": "Cinta",
+      "tip": "Duviri weapon - check the wiki for the current Acrithis / Circuit rotation that sells the parts."
+    },
+    {
+      "name": "Perigale Prime"
+    },
+    {
+      "name": "Citrine Prime"
+    },
+    {
+      "name": "Haalvu",
+      "tip": "Sentient multi-barrel rifle added in July 2026 - see the wiki link for how to get it."
+    },
+    {
+      "name": "Thornbak",
+      "tip": "Free reward from The Teacher quest - comes with its own slot and a pre-installed Orokin Catalyst.",
+      "effort": 1
+    },
+    {
+      "name": "Gyre Prime"
+    },
+    {
+      "name": "Akvasto Prime",
+      "tip": "Needs 2x Vasto Prime as ingredients (also vaulted) - check Varzia's rotation or buy the set on warframe.market."
+    },
+    {
+      "name": "Steflos Prime"
+    },
+    {
+      "name": "Venato",
+      "tip": "Caliban's signature scythe. The blueprint is in the Market. Needs Exceptional Sentient Cores and Anomaly Shards (Sentient anomaly in the Veil), Iradite and Narmer Isoplast."
+    },
+    {
+      "name": "Voruna Prime"
+    },
+    {
+      "name": "Morgha",
+      "tip": "Arch-gun. Blueprint comes from Necraloid on Deimos (Clearance: Odima). Level it with the Archgun Deployer in open worlds."
+    },
+    {
+      "name": "Alternox Prime"
+    },
+    {
+      "name": "Feverspine",
+      "tip": "Infested K-Drive (Velocipod) deck from the Entrati in the Necralisk on Deimos. A K-Drive counts like a Warframe (6,000 XP) - level it by doing tricks on the Cambion Drift."
+    },
+    {
+      "name": "Sporothrix",
+      "tip": "Parts drop from the level 50-60 Isolation Vaults on the Cambion Drift. Necraloid also sells them."
+    },
+    {
+      "name": "Korrudo",
+      "tip": "Blueprint drops from Thumpers on the Plains of Eidolon (Narmer / Tusk Thumper Bull & Doma). Needs Mawfish Bones (fishing) and Breath of the Eidolon."
+    },
+    {
+      "name": "Spectra Vandal",
+      "tip": "All parts come from Railjack caches in the Veil Proxima."
+    },
+    {
+      "name": "Venato Prime"
+    },
+    {
+      "name": "Arum Spinosa",
+      "tip": "Parts drop from the level 40-50 Isolation Vaults on the Cambion Drift. Necraloid (Clearance: Modus) also sells them."
+    },
+    {
+      "name": "Daikyu Prime"
+    },
+    {
+      "name": "Athodai",
+      "tip": "All parts come from Railjack caches in the Venus Proxima."
+    },
+    {
+      "name": "Galariak Prime",
+      "tip": "Grineer-made prime, not a relic prime: parts drop from The Perita Rebellion missions in the Dark Refractory on Deimos - same farm as Sagek Prime."
+    },
+    {
+      "name": "Hespar",
+      "tip": "Zariman heavy scythe. Blueprint from the level 90-95 Zariman bounty; blade and handle drop from Void Armageddon / Void Cascade."
+    }
   ],
   "nodes": [
-    { "planet": "Pluto", "name": "Hieracon" },
-    { "planet": "Pluto", "name": "Outer Terminus" },
-    { "planet": "Pluto", "name": "Cerberus" },
-    { "planet": "Pluto", "name": "Cypress" },
-    { "planet": "Pluto", "name": "Oceanum" },
-    { "planet": "Pluto", "name": "Minthe" },
-    { "planet": "Pluto", "name": "Acheron", "locked": true, "tip": "Locked - unlocks after you finish Oceanum." },
-    { "planet": "Neptune", "name": "Kelashin" },
-    { "planet": "Neptune", "name": "Laomedeia" },
-    { "planet": "Neptune", "name": "Sao" },
-    { "planet": "Neptune", "name": "Salacia" },
-    { "planet": "Neptune", "name": "Yursa", "locked": true, "tip": "Locked - unlocks after you finish Salacia." }
+    {
+      "planet": "Mars",
+      "name": "Syrtis"
+    },
+    {
+      "planet": "Mars",
+      "name": "Ultor"
+    },
+    {
+      "planet": "Mars",
+      "name": "Gradivus"
+    },
+    {
+      "planet": "Mars",
+      "name": "Arval"
+    },
+    {
+      "planet": "Mars",
+      "name": "War"
+    },
+    {
+      "planet": "Mars",
+      "name": "Wahiba",
+      "locked": true,
+      "tip": "Locked - opens after Ultor."
+    },
+    {
+      "planet": "Mars",
+      "name": "Kadesh",
+      "locked": true,
+      "tip": "Locked - opens after Ultor."
+    },
+    {
+      "planet": "Deimos",
+      "name": "Formido"
+    },
+    {
+      "planet": "Deimos",
+      "name": "Munio"
+    },
+    {
+      "planet": "Ceres",
+      "name": "Kiste"
+    },
+    {
+      "planet": "Ceres",
+      "name": "Cinxia"
+    },
+    {
+      "planet": "Ceres",
+      "name": "Nuovo"
+    },
+    {
+      "planet": "Ceres",
+      "name": "Bode"
+    },
+    {
+      "planet": "Ceres",
+      "name": "Ludi"
+    },
+    {
+      "planet": "Ceres",
+      "name": "Abyssal Zone",
+      "tip": "Needs an Abyssal Beacon (sold by the faction Syndicates at rank 2). Kill the target count and carry Orokin Defixios to extraction.",
+      "mission": "Abyssal Zone",
+      "faction": "Orokin"
+    },
+    {
+      "planet": "Ceres",
+      "name": "Thon",
+      "locked": true,
+      "tip": "Locked - opens after Kiste."
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Carme"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Metis"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Callisto"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Amalthea"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Thebe"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Ganymede"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Io"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Adrastea"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Ananke",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Jupiter",
+      "name": "The Ropalolyst",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished. (Ropalolyst boss fight)"
+    },
+    {
+      "planet": "Jupiter",
+      "name": "Galilea",
+      "locked": true,
+      "tip": "Locked - opens after Thebe."
+    },
+    {
+      "planet": "Europa",
+      "name": "Cholistan"
+    },
+    {
+      "planet": "Europa",
+      "name": "Orias"
+    },
+    {
+      "planet": "Europa",
+      "name": "Valefor"
+    },
+    {
+      "planet": "Europa",
+      "name": "Icefields of Riddah",
+      "tip": "Newer node not in the item dataset yet - see the wiki for details.",
+      "mission": "See wiki"
+    },
+    {
+      "planet": "Europa",
+      "name": "Mines of Karishh",
+      "tip": "Newer node not in the item dataset yet - see the wiki for details.",
+      "mission": "See wiki"
+    },
+    {
+      "planet": "Europa",
+      "name": "Archaeo-Freighter",
+      "tip": "Newer node not in the item dataset yet - see the wiki for details.",
+      "mission": "See wiki"
+    },
+    {
+      "planet": "Europa",
+      "name": "Sorath"
+    },
+    {
+      "planet": "Europa",
+      "name": "Valac",
+      "locked": true,
+      "tip": "Locked - opens after Orias."
+    },
+    {
+      "planet": "Europa",
+      "name": "Kokabiel",
+      "locked": true,
+      "tip": "Locked - opens after Valefor."
+    },
+    {
+      "planet": "Europa",
+      "name": "Abaddon",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Europa",
+      "name": "Larzac",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Europa",
+      "name": "Naamah",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Europa",
+      "name": "Armaros",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Saturn",
+      "name": "Cassini"
+    },
+    {
+      "planet": "Saturn",
+      "name": "Dione"
+    },
+    {
+      "planet": "Saturn",
+      "name": "Pandora"
+    },
+    {
+      "planet": "Saturn",
+      "name": "Rhea"
+    },
+    {
+      "planet": "Saturn",
+      "name": "Calypso"
+    },
+    {
+      "planet": "Saturn",
+      "name": "Caracol",
+      "locked": true,
+      "tip": "Locked - opens after Pandora."
+    },
+    {
+      "planet": "Uranus",
+      "name": "Cressida"
+    },
+    {
+      "planet": "Uranus",
+      "name": "Desdemona"
+    },
+    {
+      "planet": "Uranus",
+      "name": "Rosalind"
+    },
+    {
+      "planet": "Uranus",
+      "name": "Umbriel"
+    },
+    {
+      "planet": "Uranus",
+      "name": "Caliban"
+    },
+    {
+      "planet": "Uranus",
+      "name": "Puck"
+    },
+    {
+      "planet": "Uranus",
+      "name": "Caelus",
+      "locked": true,
+      "tip": "Locked - opens after Cressida."
+    },
+    {
+      "planet": "Uranus",
+      "name": "Ariel",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Uranus",
+      "name": "Sycorax",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Uranus",
+      "name": "Ophelia",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Uranus",
+      "name": "Assur",
+      "locked": true,
+      "tip": "Locked - opens after Puck."
+    },
+    {
+      "planet": "Neptune",
+      "name": "Kelashin"
+    },
+    {
+      "planet": "Neptune",
+      "name": "Laomedeia"
+    },
+    {
+      "planet": "Neptune",
+      "name": "Sao"
+    },
+    {
+      "planet": "Neptune",
+      "name": "Salacia"
+    },
+    {
+      "planet": "Neptune",
+      "name": "Yursa",
+      "locked": true,
+      "tip": "Locked - unlocks after you finish Salacia."
+    },
+    {
+      "planet": "Pluto",
+      "name": "Hieracon"
+    },
+    {
+      "planet": "Pluto",
+      "name": "Outer Terminus"
+    },
+    {
+      "planet": "Pluto",
+      "name": "Cerberus"
+    },
+    {
+      "planet": "Pluto",
+      "name": "Cypress"
+    },
+    {
+      "planet": "Pluto",
+      "name": "Oceanum"
+    },
+    {
+      "planet": "Pluto",
+      "name": "Minthe"
+    },
+    {
+      "planet": "Pluto",
+      "name": "Acheron",
+      "locked": true,
+      "tip": "Locked - unlocks after you finish Oceanum."
+    },
+    {
+      "planet": "Sedna",
+      "name": "Kappa"
+    },
+    {
+      "planet": "Sedna",
+      "name": "Berehynia"
+    },
+    {
+      "planet": "Sedna",
+      "name": "Marid"
+    },
+    {
+      "planet": "Sedna",
+      "name": "Kelpie"
+    },
+    {
+      "planet": "Sedna",
+      "name": "Sangeru",
+      "locked": true,
+      "tip": "Locked - opens after Berehynia."
+    },
+    {
+      "planet": "Sedna",
+      "name": "Merrow",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Sedna",
+      "name": "Nakki",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished. (Rathuum arena)"
+    },
+    {
+      "planet": "Sedna",
+      "name": "Yam",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished. (Rathuum arena)"
+    },
+    {
+      "planet": "Sedna",
+      "name": "Vodyanoi",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished. (Rathuum arena)"
+    },
+    {
+      "planet": "Eris",
+      "name": "Saxis"
+    },
+    {
+      "planet": "Eris",
+      "name": "Kala-Azar"
+    },
+    {
+      "planet": "Eris",
+      "name": "Naeglar"
+    },
+    {
+      "planet": "Eris",
+      "name": "Xini",
+      "locked": true,
+      "tip": "Locked - opens after Kala-Azar."
+    },
+    {
+      "planet": "Eris",
+      "name": "Zabala",
+      "locked": true,
+      "tip": "Locked - opens once a neighboring node is finished."
+    },
+    {
+      "planet": "Eris",
+      "name": "Mutalist Alad V Assassinate",
+      "locked": true,
+      "tip": "Special node unlocked by the Patient Zero quest.",
+      "mission": "Assassination",
+      "faction": "Infested"
+    },
+    {
+      "planet": "Eris",
+      "name": "Jordas Golem Assassinate",
+      "locked": true,
+      "tip": "Special Archwing node unlocked by The Jordas Precept quest.",
+      "mission": "Archwing Assassination",
+      "faction": "Infested"
+    }
   ]
 }

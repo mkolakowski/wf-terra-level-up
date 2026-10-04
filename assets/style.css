@@ -183,3 +183,13 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
   .hero-goal { font-size: 1.3rem; }
 }
 .item-cell .ph { display: none; }
+
+/* Route plan */
+.route tr.extra td { opacity: .5; }
+.route tr:not(.extra) + tr.extra td { border-top: 2px solid var(--gold); }
+.effort { font-size: .78rem; font-weight: 600; white-space: nowrap; }
+.effort.e0 { color: var(--green); }
+.effort.e1 { color: var(--cyan); }
+.effort.e2 { color: var(--text); }
+.effort.e3 { color: var(--gold); }
+.effort.e4 { color: var(--red); }

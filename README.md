@@ -19,6 +19,8 @@ All progress lives in [`data/tracker.json`](data/tracker.json):
 - Update a rank: change `"rank"`; set `"owned": true` once it's built (hides the parts list).
 - Mark a node done: add `"done": "YYYY-MM-DD"` to the node.
 - Set current mastery: `player.currentXP` (and optionally `player.currentRankLabel`, e.g. `"Legendary 3"`).
+- `player.chartMode` labels the star chart (`"Steel Path"` adds +100 to enemy levels).
+- `"effort"` (0-4) on an item overrides where it sits in the "Fastest route" plan.
 
 If you add a **new** item or node, regenerate `data/items.json` (images, parts, relics, drops) from the community [WFCD warframe-items](https://github.com/WFCD/warframe-items) dataset:
 

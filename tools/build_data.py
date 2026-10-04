@@ -172,7 +172,14 @@ def main(pkg):
     for entry in tracker["nodes"]:
         n = next((x for x in nodes if x["name"] == entry["name"] and x["systemName"] == entry["planet"]), None)
         if not n:
-            print("WARN: node not found:", entry, file=sys.stderr)
+            # Nodes newer than the dataset: fall back to details written in tracker.json
+            if "mission" not in entry:
+                print("WARN: node not found:", entry, file=sys.stderr)
+                continue
+            out["nodes"][f'{entry["name"]} ({entry["planet"]})'] = {
+                "name": entry["name"], "planet": entry["planet"], "mission": entry["mission"],
+                "faction": entry.get("faction", ""), "levels": entry.get("levels"), "darkSector": False,
+            }
             continue
         out["nodes"][f'{entry["name"]} ({entry["planet"]})'] = {
             "name": n["name"],

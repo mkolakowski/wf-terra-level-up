@@ -111,19 +111,57 @@
         <div class="stat"><b>${gear.filter((g) => g.done).length + nodes.filter((n) => n.done).length}</b><span>mastered since tracking</span></div>
       </div>
 
-      <h2>Quick wins</h2>
+      ${routeHTML(todo, p)}
+
+      <h2>Also on the list</h2>
       <div class="quick">
         <div class="q"><h3>Already owned - just level</h3>
           ${owned.length ? `<ol>${owned.map((g) => `<li>${esc(g.name)} <span class="muted">(${fmt(remainingXP(g))} XP)</span></li>`).join('')}</ol>` : '<p class="muted small">Nothing owned and unranked right now.</p>'}
         </div>
-        <div class="q"><h3>Star chart nodes</h3>
-          <ol>${nodesLeft.filter((n) => !n.locked).map((n) => `<li>${esc(n.name)}, ${esc(n.planet)} <span class="muted">(${esc(n.d ? n.d.mission : '')})</span></li>`).join('')}</ol>
-          <p class="muted small">Then ${nodesLeft.filter((n) => n.locked).map((n) => esc(n.name)).join(' & ')} unlock.</p>
-        </div>
-        <div class="q"><h3>Biggest XP left</h3>
-          <ol>${[...todo].sort((a, b) => remainingXP(b) - remainingXP(a)).slice(0, 6).map((g) => `<li>${esc(g.name)} <span class="muted">(${fmt(remainingXP(g))})</span></li>`).join('')}</ol>
+        <div class="q"><h3>${esc(p.chartMode || 'Star chart')} nodes</h3>
+          <ol>${planetsOf(nodesLeft).map((pl) => { const l = nodesLeft.filter((n) => n.planet === pl); const open = l.filter((n) => !n.locked).length; return `<li>${esc(pl)} <span class="muted">(${open} open${l.length > open ? `, ${l.length - open} locked` : ''})</span></li>`; }).join('')}</ol>
+          <p class="muted small">Node XP isn't counted in the plan above, so every node finished is a bonus on top.</p>
         </div>
       </div>`;
+  }
+
+  // Effort: 0 owned, 1 free/quest, 2 regular farm, 3 relic farm, 4 vaulted (trade / Varzia). Override with "effort" in tracker.json.
+  const EFFORT_LABEL = ['Already owned', 'Free / quick', 'Regular farm', 'Relic farm', 'Vaulted - trade or Varzia'];
+  function effort(g) {
+    if (g.effort != null) return g.effort;
+    if (g.owned) return 0;
+    if (g.d.isPrime && g.d.vaulted) return 4;
+    if (g.d.parts.some((p) => p.relics.length)) return 3;
+    return 2;
+  }
+  function routeHTML(todo, p) {
+    if (p.currentXP == null) return '';
+    const left = Math.max(0, p.goalXP - p.currentXP);
+    if (!left) return '';
+    const plan = [...todo].sort((a, b) => (effort(a) - effort(b)) || (remainingXP(b) - remainingXP(a)));
+    let sum = 0;
+    let reached = -1;
+    const rows = plan.map((g, i) => {
+      sum += remainingXP(g);
+      const hit = reached === -1 && sum >= left;
+      if (hit) reached = i;
+      return `<tr class="${reached !== -1 && i > reached ? 'extra' : ''}">
+        <td class="num">${i + 1}</td>
+        <td><div class="item-cell">${img(g.d)}<b>${esc(g.name)}</b></div></td>
+        <td><span class="effort e${effort(g)}">${esc(EFFORT_LABEL[effort(g)])}</span></td>
+        <td class="num">${fmt(remainingXP(g))}</td>
+        <td class="num">${fmt(sum)}${hit ? ' <span class="badge owned">L6!</span>' : ''}</td>
+      </tr>`;
+    });
+    const steps = reached + 1;
+    return `
+      <h2>Fastest route to ${esc(p.goal)}</h2>
+      <p class="muted">Easiest items first (owned → free → regular farms → relics → vaulted), biggest XP first within each group.
+        ${steps ? `Mastering the first <b>${steps}</b> items covers the <b>${fmt(left)}</b> XP needed.` : ''} Items below the line are spares.</p>
+      <div class="table-wrap route"><table>
+        <thead><tr><th class="num">#</th><th>Item</th><th>Effort</th><th class="num">XP</th><th class="num">Running total</th></tr></thead>
+        <tbody>${rows.join('')}</tbody>
+      </table></div>`;
   }
 
   // ---------- render: gear ----------
@@ -240,18 +278,27 @@
   }
 
   // ---------- render: star chart ----------
+  const planetsOf = (list) => [...new Set(list.map((n) => n.planet))];
+  function levelText(n) {
+    if (!n.d || !n.d.levels) return '';
+    if (tracker.player.chartMode !== 'Steel Path') return ` · Lv ${n.d.levels}`;
+    const [a, b] = String(n.d.levels).split('-').map(Number);
+    return ` · Lv ${a + 100}-${b + 100}`;
+  }
   function renderStarChart() {
     const left = nodes.filter((n) => !n.done);
-    const planets = [...new Set(left.map((n) => n.planet))];
+    const mode = tracker.player.chartMode || 'Star chart';
+    const sp = mode === 'Steel Path';
     $('#starchart').innerHTML = left.length ? `
-      <p class="muted">Incomplete nodes from the star chart screenshots. Finishing a node once gives its mastery XP; each node gives the same XP again on the Steel Path.</p>
-      ${planets.map((pl) => `
+      <p class="muted">${left.length} incomplete ${esc(mode)} nodes from the screenshots (${left.filter((n) => !n.locked).length} open now, the rest unlock as their neighbors are finished).
+        ${sp ? 'Steel Path nodes give the same mastery XP as the normal version a second time; enemies are +100 levels and drop Steel Essence from Acolytes along the way.' : 'Each node gives its mastery XP once, and again on the Steel Path.'}</p>
+      ${planetsOf(left).map((pl) => `
         <div class="planet">
           <h2>${esc(pl)} <span class="muted small">(${left.filter((n) => n.planet === pl).length} left)</span></h2>
           <div class="nodes">${left.filter((n) => n.planet === pl).map((n) => `
             <div class="node${n.locked ? ' locked' : ''}">
               <h3>${n.locked ? '<svg width="12" height="14" viewBox="0 0 12 14" aria-label="Locked"><rect x="1" y="6" width="10" height="7" rx="1.5" fill="currentColor"/><path d="M3.5 6V4a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>' : ''}${esc(n.name)}</h3>
-              <div class="meta">${esc(n.d ? n.d.mission : '')}${n.d && n.d.faction ? ` · ${esc(n.d.faction)}` : ''}${n.d ? ` · Lv ${esc(n.d.levels)}` : ''}</div>
+              <div class="meta">${esc(n.d ? n.d.mission : '')}${n.d && n.d.faction ? ` · ${esc(n.d.faction)}` : ''}${esc(levelText(n))}</div>
               <div class="badges">${n.d && n.d.darkSector ? '<span class="badge ds">Dark Sector</span>' : ''}${n.locked ? '<span class="badge locked">Locked</span>' : ''}</div>
               ${n.tip ? `<p class="small muted" style="margin:6px 0 0">${esc(n.tip)}</p>` : ''}
             </div>`).join('')}
