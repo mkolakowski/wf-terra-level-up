@@ -12,6 +12,12 @@ Every entry starts with an `Author: <name>` line, and every commit message start
 
 The deploy workflow fails if a push changes anything without bumping `VERSION`, adding a matching entry with an author here, and leading each commit message with the version.
 
+## v1.5.2 - 2026-10-04
+
+Author: Claude Code (requested by @mkolakowski)
+
+- README: added the live site URL (https://mkolakowski.github.io/wf-terra-level-up/).
+
 ## v1.5.1 - 2026-10-04
 
 Author: Claude Code (requested by @mkolakowski)

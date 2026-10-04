@@ -1,5 +1,7 @@
 # Road to Legendary 6
 
+**Live site: https://mkolakowski.github.io/wf-terra-level-up/**
+
 A public GitHub Pages tracker for getting Terra (Hunter Founder) from where they are now to **Legendary Rank 6** in Warframe (3,135,000 mastery XP).
 
 The page shows:
@@ -48,7 +50,7 @@ The deploy workflow runs `tools/check_changelog.py` first and won't publish with
 
 ## Deploying
 
-`.github/workflows/pages.yml` publishes the repo root to GitHub Pages on every push to `main` (or this working branch). In the repo settings, set **Pages → Build and deployment → Source** to **GitHub Actions** once.
+`.github/workflows/pages.yml` publishes the repo root to GitHub Pages at https://mkolakowski.github.io/wf-terra-level-up/ on every push to `main` (or this working branch). In the repo settings, set **Pages → Build and deployment → Source** to **GitHub Actions** once.
 
 Run locally with `python3 -m http.server` and open http://localhost:8000.
 
