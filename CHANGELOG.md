@@ -12,6 +12,12 @@ Every entry starts with an `Author: <name>` line, and every commit message start
 
 The deploy workflow fails if a push changes anything without bumping `VERSION`, adding a matching entry with an author here, and leading each commit message with the version.
 
+## v1.5.1 - 2026-10-04
+
+Author: Claude Code (requested by @mkolakowski)
+
+- Progress: Kelashin (Neptune, Steel Path) mastered.
+
 ## v1.5.0 - 2026-10-04
 
 Author: Claude Code (requested by @tbeaty91)
