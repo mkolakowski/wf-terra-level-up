@@ -5,7 +5,7 @@ A public GitHub Pages tracker for getting Terra (Hunter Founder) from where they
 The page shows:
 
 - **Overview** - progress toward L6, how much XP is left in the list, quick wins.
-- **Gear** - every unmastered item with its image, mastery XP, MR requirement and a farming tip. Prime items list each part, the relics it drops from and its rarity.
+- **Gear** - every masterable item in the game, split into To master / Mastered / All. Unmastered items show their image, mastery XP, MR requirement and a farming tip; prime items list each part, the relics it drops from and its rarity. Anything can be added to the list, ticked off or removed right on the page - those changes save in that browser only.
 - **Star Chart** - incomplete nodes with mission type, faction and level.
 - **Prime Parts** - every prime part still needed, relics + rarity, ducat value, warframe.market link, and total resources/credits to build everything.
 - **Relic Planner** - the same parts grouped by relic, so you can see which relics cover several parts.
@@ -22,7 +22,9 @@ All progress lives in [`data/tracker.json`](data/tracker.json):
 - `player.chartMode` labels the star chart (`"Steel Path"` adds +100 to enemy levels).
 - `"effort"` (0-4) on an item overrides where it sits in the "Fastest route" plan.
 
-If you add a **new** item or node, regenerate `data/items.json` (images, parts, relics, drops) from the community [WFCD warframe-items](https://github.com/WFCD/warframe-items) dataset:
+`data/items.json` holds every masterable item in the game (around 820, including amp prisms and both primary and secondary kitgun chambers). Items in `tracker.json` are the to-master list; every other item counts as already mastered.
+
+When new gear comes out, or you add a node, regenerate `data/items.json` (images, parts, relics, drops) from the community [WFCD warframe-items](https://github.com/WFCD/warframe-items) dataset:
 
 ```sh
 npm pack @wfcd/items@latest

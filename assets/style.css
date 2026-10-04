@@ -212,3 +212,13 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .version-tag.current { color: var(--bg); background: var(--gold); border-color: var(--gold); }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; background: var(--card-2); padding: 1px 5px; border-radius: 4px; }
 .log-author { color: var(--muted); font-size: .82rem; margin-top: -2px; }
+
+/* Full item list: per-card actions, mastered cards, add-item picker */
+.card-actions { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 14px; margin-top: auto; }
+.card-actions .chip { padding: 4px 10px; font-size: .78rem; }
+.card-actions .chip:hover, .more-row .chip:hover { color: var(--text); border-color: var(--gold); }
+.card.done .thumb { opacity: .75; }
+.badge.mastered { color: var(--green); border-color: color-mix(in srgb, var(--green) 50%, transparent); }
+.add-item input { flex: 1 1 220px; min-width: 0; background: var(--card); border: 1px solid var(--line); color: var(--text); border-radius: 10px; padding: 9px 12px; font: inherit; }
+.more-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 16px 0 8px; }
+.more-row:empty { display: none; }

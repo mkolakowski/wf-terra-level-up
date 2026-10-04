@@ -12,8 +12,21 @@
   const fmt = (n) => Number(n || 0).toLocaleString('en-US');
 
   let tracker, data, gear, nodes;
-  const state = { filter: 'all', sort: 'default', q: '', tier: 'all', chartView: 'planet' };
+  const PAGE = 120;
+  const state = { filter: 'all', status: 'todo', sort: 'default', q: '', tier: 'all', chartView: 'planet', shown: PAGE };
   try { state.chartView = localStorage.getItem('chartView') || 'planet'; } catch (e) { /* ignore */ }
+
+  // Changes made on the site live only in this browser: { [item name]: { s: 'todo' | 'mastered', at: 'YYYY-MM-DD' } }
+  const OVERRIDES_KEY = 'itemOverrides';
+  let overrides = {};
+  try { overrides = JSON.parse(localStorage.getItem(OVERRIDES_KEY)) || {}; } catch (e) { overrides = {}; }
+  const today = () => new Date().toLocaleDateString('en-CA');
+  function setOverride(name, s) {
+    if (s) overrides[name] = { s, at: today() };
+    else delete overrides[name];
+    try { localStorage.setItem(OVERRIDES_KEY, JSON.stringify(overrides)); } catch (e) { /* ignore */ }
+    rebuild();
+  }
 
   // ---------- helpers ----------
   function img(d, cls = '') {
@@ -36,10 +49,12 @@
   const remainingXP = (g) => Math.max(0, g.d.masteryXP - (g.rank || 0) * g.d.xpPerRank);
   const needsParts = (g) => !g.owned && !g.done;
   const kind = (d) => {
+    if (d.type === 'Necramech') return 'Necramech';
     if (d.category === 'Warframes') return 'Warframe';
     if (d.type === 'K-Drive Component') return 'K-Drive';
-    if (d.category === 'Arch-Gun' || d.category === 'Arch-Melee') return d.category;
-    return d.category === 'Melee' ? 'Melee' : d.category;
+    if (d.category === 'Sentinels' || d.category === 'Pets') return 'Companion';
+    if (d.type === 'Companion Weapon') return 'Companion Weapon';
+    return d.category;
   };
   const relicLabel = (r) => {
     const title = REFINES.filter((k) => r.chances[k] != null).map((k) => `${k}: ${r.chances[k]}%`).join(' · ');
@@ -74,6 +89,8 @@
   function renderOverview() {
     const p = tracker.player;
     const todo = gear.filter((g) => !g.done);
+    const ticked = gear.filter((g) => g.local && g.done);
+    const tickedXP = ticked.reduce((s, g) => s + remainingXP({ ...g, done: false }), 0);
     const nodesLeft = nodes.filter((n) => !n.done);
     const xpLeft = todo.reduce((s, g) => s + remainingXP(g), 0);
     const primeParts = primePartRows();
@@ -87,7 +104,8 @@
       progress = `
         <div class="bar" role="progressbar" aria-valuenow="${pct.toFixed(1)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${pct}%"></span></div>
         <div class="hero-top small"><span>${fmt(p.currentXP)} / ${fmt(p.goalXP)} mastery XP${p.currentRankLabel ? ` · currently ${esc(p.currentRankLabel)}` : ''}</span><span>${pct.toFixed(1)}%</span></div>
-        <div class="notice">${left === 0 ? 'Goal reached!' : `<b>${fmt(left)}</b> XP to go. The gear on this list is worth <b>${fmt(xpLeft)}</b> XP${xpLeft >= left ? ' - enough to get there.' : ' - star chart / Steel Path nodes and intrinsics make up the rest.'}`}</div>`;
+        <div class="notice">${left === 0 ? 'Goal reached!' : `<b>${fmt(left)}</b> XP to go. The gear on this list is worth <b>${fmt(xpLeft)}</b> XP${xpLeft >= left ? ' - enough to get there.' : ' - star chart / Steel Path nodes and intrinsics make up the rest.'}`}</div>
+        ${ticked.length && left ? `<div class="notice">You've ticked off ${ticked.length} item${ticked.length > 1 ? 's' : ''} in this browser since then (${fmt(tickedXP)} XP), so roughly <b>${fmt(Math.max(0, left - tickedXP))}</b> XP to go.</div>` : ''}`;
     } else {
       progress = `<div class="notice">Current mastery XP hasn't been entered yet. Once it's added, this shows a progress bar toward ${fmt(p.goalXP)} XP (Legendary 6).</div>`;
     }
@@ -109,7 +127,7 @@
         <div class="stat"><b>${nodesLeft.length}</b><span>star chart nodes left</span></div>
         <div class="stat"><b>${primeParts.length}</b><span>prime parts to collect</span></div>
         <div class="stat"><b>${relicsNeeded.size}</b><span>different relics involved</span></div>
-        <div class="stat"><b>${gear.filter((g) => g.done).length + nodes.filter((n) => n.done).length}</b><span>mastered since tracking</span></div>
+        <div class="stat"><b>${gear.filter((g) => g.done && !g.assumed).length + nodes.filter((n) => n.done).length}</b><span>mastered since tracking</span></div>
       </div>
 
       ${routeHTML(todo, p)}
@@ -168,11 +186,14 @@
   // ---------- render: gear ----------
   const FILTERS = [
     ['all', 'All'], ['owned', 'Owned'], ['prime', 'Prime'], ['vaulted', 'Vaulted'], ['nonprime', 'Non-prime'],
-    ['frame', 'Warframes'], ['weapon', 'Weapons'], ['arch', 'Arch / K-Drive'],
+    ['frame', 'Warframes'], ['weapon', 'Weapons'], ['companion', 'Companions'], ['arch', 'Arch / K-Drive / Amps'],
   ];
+  const STATUSES = [['todo', 'To master'], ['mastered', 'Mastered'], ['all', 'All items']];
   function gearMatches(g) {
     const d = g.d;
     const k = kind(d);
+    if (state.status === 'todo' && g.done) return false;
+    if (state.status === 'mastered' && !g.done) return false;
     switch (state.filter) {
       case 'owned': if (!g.owned) return false; break;
       case 'prime': if (!d.isPrime) return false; break;
@@ -180,7 +201,8 @@
       case 'nonprime': if (d.isPrime) return false; break;
       case 'frame': if (k !== 'Warframe') return false; break;
       case 'weapon': if (!['Primary', 'Secondary', 'Melee'].includes(k)) return false; break;
-      case 'arch': if (!['Arch-Gun', 'Arch-Melee', 'K-Drive'].includes(k)) return false; break;
+      case 'companion': if (!['Companion', 'Companion Weapon'].includes(k)) return false; break;
+      case 'arch': if (!['Arch-Gun', 'Arch-Melee', 'Archwing', 'K-Drive', 'Necramech', 'Amp'].includes(k)) return false; break;
     }
     if (state.q) {
       const hay = [g.name, d.type, d.category, ...d.parts.flatMap((p) => p.relics.map((r) => r.relic))].join(' ').toLowerCase();
@@ -212,7 +234,38 @@
     return `${parts}${req}${res}<p class="small"><a href="${esc(d.wiki)}" target="_blank" rel="noopener">Wiki page →</a></p>`;
   }
 
+  function gearActions(g) {
+    const btn = (act, label) => `<button class="chip act" type="button" data-act="${act}" data-name="${esc(g.name)}">${label}</button>`;
+    const out = [];
+    if (g.done) out.push(btn('todo', 'Add to my list'));
+    else out.push(btn('mastered', 'Mark mastered'));
+    if (g.local) out.push(btn('undo', g.added && !g.done ? 'Remove' : 'Undo'));
+    return `<div class="card-actions">${out.join('')}</div>`;
+  }
+
+  function masteredCard(g) {
+    const d = g.d;
+    const k = kind(d);
+    return `
+      <article class="card done">
+        <div class="card-head">
+          <div class="thumb">${img(d)}</div>
+          <div class="card-title">
+            <h3><a href="${esc(d.wiki)}" target="_blank" rel="noopener">${esc(d.name)}</a></h3>
+            <div class="meta">${esc(k)}${d.type && d.type !== k && d.type !== 'Warframe' ? ` · ${esc(d.type)}` : ''}${d.masteryReq ? ` · MR ${d.masteryReq}` : ''}</div>
+            <div class="badges">
+              <span class="badge mastered">Mastered${typeof g.done === 'string' ? ` ${esc(g.done)}` : ''}</span>
+              <span class="badge">${fmt(d.masteryXP)} XP</span>
+              ${d.isPrime ? '<span class="badge prime">Prime</span>' : ''}
+            </div>
+          </div>
+        </div>
+        ${gearActions(g)}
+      </article>`;
+  }
+
   function gearCard(g) {
+    if (g.done) return masteredCard(g);
     const d = g.d;
     const k = kind(d);
     const tip = g.tip || autoTip(g);
@@ -232,6 +285,7 @@
               ${d.isPrime ? '<span class="badge prime">Prime</span>' : ''}
               ${d.vaulted ? '<span class="badge vaulted">Vaulted</span>' : ''}
               ${g.owned ? '<span class="badge owned">Owned</span>' : ''}
+              ${g.added ? '<span class="badge">Added here</span>' : ''}
               ${d.maxRank > 30 ? `<span class="badge">Rank ${d.maxRank}</span>` : ''}
             </div>
             ${rank}
@@ -239,6 +293,7 @@
         </div>
         ${tip ? `<div class="tip">${esc(tip)}</div>` : ''}
         ${showParts ? `<details class="more"><summary>${d.isPrime ? 'Parts & relics' : 'How to get it'}</summary><div class="more-body">${partsHTML(g)}</div></details>` : ''}
+        ${gearActions(g)}
       </article>`;
   }
 
@@ -246,6 +301,13 @@
     const panel = $('#gear');
     if (!panel.dataset.ready) {
       panel.innerHTML = `
+        <div class="toolbar" id="gearStatus"></div>
+        <form class="toolbar add-item" id="addItem">
+          <input list="addItemList" id="addItemName" placeholder="Add any item to your list…" aria-label="Add an item to the list" autocomplete="off">
+          <datalist id="addItemList"></datalist>
+          <button class="chip" type="submit">Add</button>
+          <span class="muted small" id="addItemMsg"></span>
+        </form>
         <div class="toolbar">
           <input type="search" id="gearSearch" placeholder="Search items or relics (e.g. Axi C12)…" aria-label="Search gear">
           <select class="chip" id="gearSort" aria-label="Sort">
@@ -256,26 +318,77 @@
           </select>
         </div>
         <div class="toolbar" id="gearFilters">${FILTERS.map(([v, l]) => `<button class="chip${v === state.filter ? ' on' : ''}" data-f="${v}">${l}</button>`).join('')}</div>
-        <div class="grid" id="gearGrid"></div>`;
-      $('#gearSearch').addEventListener('input', (e) => { state.q = e.target.value.trim(); drawGear(); });
+        <div class="grid" id="gearGrid"></div>
+        <div class="more-row" id="gearMore"></div>
+        <p class="muted small" id="gearNote"></p>`;
+      $('#gearSearch').addEventListener('input', (e) => { state.q = e.target.value.trim(); state.shown = PAGE; drawGear(); });
       $('#gearSort').addEventListener('change', (e) => { state.sort = e.target.value; drawGear(); });
       $('#gearFilters').addEventListener('click', (e) => {
         const b = e.target.closest('[data-f]');
         if (!b) return;
         state.filter = b.dataset.f;
+        state.shown = PAGE;
         panel.querySelectorAll('#gearFilters .chip').forEach((c) => c.classList.toggle('on', c === b));
         drawGear();
+      });
+      $('#gearStatus').addEventListener('click', (e) => {
+        const b = e.target.closest('[data-s]');
+        if (!b) return;
+        state.status = b.dataset.s;
+        state.shown = PAGE;
+        drawGear();
+      });
+      $('#addItem').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = $('#addItemName');
+        const want = input.value.trim().toLowerCase();
+        const g = gear.find((x) => x.name.toLowerCase() === want);
+        const msg = $('#addItemMsg');
+        if (!g) { msg.textContent = want ? 'No item by that name - pick one from the list.' : ''; return; }
+        if (!g.done) { msg.textContent = `${g.name} is already on your list.`; return; }
+        input.value = '';
+        setOverride(g.name, 'todo');
+        $('#addItemMsg').textContent = `Added ${g.name}.`;
+      });
+      $('#gearGrid').addEventListener('click', (e) => {
+        const b = e.target.closest('[data-act]');
+        if (!b) return;
+        const g = gear.find((x) => x.name === b.dataset.name);
+        if (!g) return;
+        // Undo, or a change that lands back on the tracker.json state, just drops the override
+        const want = b.dataset.act;
+        if (want === 'undo' || (want === 'todo' && g.base === 'todo') || (want === 'mastered' && g.base === 'mastered')) setOverride(g.name, null);
+        else setOverride(g.name, want);
+      });
+      $('#gearMore').addEventListener('click', (e) => {
+        if (e.target.closest('[data-more]')) { state.shown += PAGE * 2; drawGear(); }
+        if (e.target.closest('[data-reset]') && confirm('Forget every change made in this browser and go back to the published list?')) {
+          overrides = {};
+          try { localStorage.removeItem(OVERRIDES_KEY); } catch (err) { /* ignore */ }
+          rebuild();
+        }
       });
       panel.dataset.ready = '1';
     }
     drawGear();
   }
   function drawGear() {
-    let list = gear.filter((g) => !g.done && gearMatches(g));
+    const counts = { todo: gear.filter((g) => !g.done).length, mastered: gear.filter((g) => g.done).length, all: gear.length };
+    $('#gearStatus').innerHTML = STATUSES.map(([v, l]) => `<button class="chip${v === state.status ? ' on' : ''}" type="button" data-s="${v}">${l} <span class="muted">${counts[v]}</span></button>`).join('');
+    $('#addItemList').innerHTML = gear.filter((g) => g.done).map((g) => `<option value="${esc(g.name)}"></option>`).join('');
+
+    let list = gear.filter(gearMatches);
+    // Default order: the list from tracker.json first, then everything else by name
+    if (state.sort === 'default') list.sort((a, b) => (a.order - b.order) || a.name.localeCompare(b.name));
     if (state.sort === 'xp') list.sort((a, b) => remainingXP(b) - remainingXP(a));
     if (state.sort === 'name') list.sort((a, b) => a.name.localeCompare(b.name));
     if (state.sort === 'mr') list.sort((a, b) => a.d.masteryReq - b.d.masteryReq);
-    $('#gearGrid').innerHTML = list.length ? list.map(gearCard).join('') : '<div class="empty">Nothing matches.</div>';
+    $('#gearGrid').innerHTML = list.length ? list.slice(0, state.shown).map(gearCard).join('') : '<div class="empty">Nothing matches.</div>';
+
+    const changed = Object.keys(overrides).length;
+    $('#gearMore').innerHTML = (list.length > state.shown ? `<button class="chip" type="button" data-more>Show more (${fmt(list.length - state.shown)} left)</button>` : '')
+      + (changed ? `<button class="chip" type="button" data-reset>Reset ${changed} browser change${changed > 1 ? 's' : ''}</button>` : '');
+    $('#gearNote').textContent = 'Every masterable item in the game is here. Anything not on the published list counts as already mastered. Adding, ticking off or removing items here saves in this browser only - other visitors still see the published list.';
   }
 
   // ---------- render: star chart ----------
@@ -455,17 +568,20 @@
 
   // ---------- render: mastered ----------
   function renderMastered() {
-    const doneGear = gear.filter((g) => g.done).sort((a, b) => String(b.done).localeCompare(String(a.done)));
+    const doneGear = gear.filter((g) => g.done && !g.assumed).sort((a, b) => String(b.done).localeCompare(String(a.done)));
+    const assumed = gear.filter((g) => g.assumed).length;
+    const before = `<p class="muted small">Plus ${fmt(assumed)} items that were mastered before tracking started - see them under Gear → Mastered.</p>`;
     const doneNodes = nodes.filter((n) => n.done).sort((a, b) => String(b.done).localeCompare(String(a.done)));
     if (!doneGear.length && !doneNodes.length) {
-      $('#mastered').innerHTML = '<div class="empty">Nothing logged yet - gear and nodes move here as they get mastered.</div>';
+      $('#mastered').innerHTML = '<div class="empty">Nothing logged yet - gear and nodes move here as they get mastered.</div>' + before;
       return;
     }
     const xp = doneGear.reduce((s, g) => s + remainingXP({ ...g, done: false }), 0);
     $('#mastered').innerHTML = `
       <p class="muted">${doneGear.length} items (${fmt(xp)} XP) and ${doneNodes.length} nodes mastered since tracking started.</p>
+      ${before}
       ${doneGear.length ? `<div class="table-wrap"><table><thead><tr><th>Item</th><th>Type</th><th class="num">XP</th><th>Date</th></tr></thead><tbody>
-        ${doneGear.map((g) => `<tr><td><div class="item-cell">${img(g.d)}<b>${esc(g.name)}</b></div></td><td>${esc(kind(g.d))}</td><td class="num">${fmt(remainingXP({ ...g, done: false }))}</td><td>${esc(g.done === true ? '' : g.done)}</td></tr>`).join('')}
+        ${doneGear.map((g) => `<tr><td><div class="item-cell">${img(g.d)}<b>${esc(g.name)}</b>${g.local ? ' <span class="badge">this browser</span>' : ''}</div></td><td>${esc(kind(g.d))}</td><td class="num">${fmt(remainingXP({ ...g, done: false }))}</td><td>${esc(g.done === true ? '' : g.done)}</td></tr>`).join('')}
       </tbody></table></div>` : ''}
       ${doneNodes.length ? `<h2>Nodes</h2><div class="table-wrap"><table><thead><tr><th>Node</th><th>Planet</th><th>Date</th></tr></thead><tbody>
         ${doneNodes.map((n) => `<tr><td>${esc(n.name)}</td><td>${esc(n.planet)}</td><td>${esc(n.done === true ? '' : n.done)}</td></tr>`).join('')}
@@ -552,6 +668,34 @@
     try { localStorage.setItem('theme', next); } catch (e) { /* ignore */ }
   });
 
+  // ---------- items ----------
+  // Every item in items.json. Items on the tracker.json list keep their entry (rank, tip, done...);
+  // the rest were mastered before tracking started. Browser overrides go on top.
+  function buildGear() {
+    const entries = new Map(tracker.items.map((e, i) => [e.name, { ...e, order: i }]));
+    return Object.values(data.items).map((d) => {
+      const e = entries.get(d.name);
+      const g = e ? { ...e, d, tracked: true } : { name: d.name, d, order: Infinity, done: true, assumed: true };
+      g.base = g.done ? 'mastered' : 'todo';
+      const o = overrides[d.name];
+      if (o && o.s !== g.base) {
+        g.local = true;
+        g.assumed = false;
+        if (o.s === 'todo') { g.done = false; g.added = !e || undefined; } else g.done = o.at;
+      }
+      return g;
+    });
+  }
+
+  function rebuild() {
+    gear = buildGear();
+    renderOverview();
+    renderGear();
+    renderPrimes();
+    renderRelics();
+    renderMastered();
+  }
+
   // ---------- boot ----------
   async function load() {
     const get = (u) => fetch(u, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); });
@@ -566,7 +710,6 @@
       $('#overview').innerHTML = `<div class="empty">Couldn't load tracker data (${esc(err.message)}).</div>`;
       return;
     }
-    gear = tracker.items.filter((e) => data.items[e.name]).map((e) => ({ ...e, d: data.items[e.name] }));
     nodes = tracker.nodes.map((n) => ({ ...n, d: data.nodes[`${n.name} (${n.planet})`] }));
 
     $('#title').textContent = `${tracker.player.name}'s Road to ${tracker.player.goal}`;
@@ -574,12 +717,8 @@
     document.title = `${tracker.player.name} → ${tracker.player.goal}`;
     $('#dataDate').textContent = data.generated;
 
-    renderOverview();
-    renderGear();
+    rebuild();
     renderStarChart();
-    renderPrimes();
-    renderRelics();
-    renderMastered();
     renderTips();
 
     const hash = location.hash.slice(1);

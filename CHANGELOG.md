@@ -12,6 +12,16 @@ Every entry starts with an `Author: <name>` line, and every commit message start
 
 The deploy workflow fails if a push changes anything without bumping `VERSION`, adding a matching entry with an author here, and leading each commit message with the version.
 
+## v1.5.0 - 2026-10-04
+
+Author: Claude Code (requested by @tbeaty91)
+
+- Every masterable item in Warframe is now in the data (824 items, including amp prisms and primary + secondary kitguns). Items not on the to-master list count as already mastered.
+- Gear tab: **To master / Mastered / All items** views, a **Companions** filter, and amps / Archwings / Necramechs under Arch / K-Drive / Amps.
+- Gear tab: an **Add any item to your list** picker, plus **Mark mastered**, **Add to my list** and **Undo / Remove** buttons on every card. These save in your browser only - the published list doesn't change. A reset button clears them.
+- Overview estimates the XP left after items ticked off in this browser. The Mastered tab shows those items too.
+- `tools/build_data.py` now builds every masterable item, and writes `data/items.json` compact.
+
 ## v1.4.0 - 2026-10-04
 
 Author: Claude Code (requested by @mkolakowski)

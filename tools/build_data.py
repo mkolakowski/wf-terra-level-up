@@ -6,8 +6,10 @@ Usage:
     mkdir -p /tmp/wfcd && tar xzf wfcd-items-*.tgz -C /tmp/wfcd
     python3 tools/build_data.py /tmp/wfcd/package
 
-Reads data/tracker.json for the item / node names to look up and writes
-data/items.json with images, mastery XP, parts, relics and resources.
+Writes data/items.json with images, mastery XP, parts, relics and resources for
+every masterable item in the game (plus anything named in data/tracker.json), and
+the star chart nodes listed in data/tracker.json. Items not on the tracker's list
+show up on the site as already mastered.
 """
 import glob
 import json
@@ -29,6 +31,8 @@ MISSION_TYPES = {
 FACTIONS = {0: "Grineer", 1: "Corpus", 2: "Infested", 3: "Orokin", 4: "Crossfire",
             5: "Sentient", 6: "Narmer", 7: "Murmur", 8: "Scaldra", 9: "Techrot"}
 NODE_TYPES = {4: "Dark Sector"}
+# Masterable items the dataset doesn't flag as masterable
+EXTRA_SECONDARY_KITGUNS = {"Sporelacer", "Vermisplicer"}
 RELIC_RE = re.compile(r"^(Lith|Meso|Neo|Axi|Requiem) (\S+) Relic(?: \((\w+)\))?$")
 
 
@@ -49,6 +53,125 @@ def mastery_xp(item):
         "K-Drive Component", "Necramech")
     per_rank = 200 if frame_like else 100
     return per_rank, per_rank * cap, cap
+
+
+def masterable_items(data_dir, tracker, by_name):
+    """Every masterable item, plus anything named in tracker.json, in a stable order."""
+    items, seen = [], set()
+
+    def add(it, **overrides):
+        it = {**it, **overrides}
+        if it["name"].lower() in seen:
+            return
+        seen.add(it["name"].lower())
+        items.append(it)
+
+    for entry in tracker["items"]:
+        it = by_name.get(entry["name"].lower())
+        if it:
+            add(it)
+        else:
+            print("WARN: not found:", entry["name"], file=sys.stderr)
+    for f in sorted(glob.glob(os.path.join(data_dir, "*.json"))):
+        if os.path.basename(f) in SKIP_FILES:
+            continue
+        for it in json.load(open(f)):
+            if "name" not in it:
+                continue
+            typ = it.get("type")
+            if typ == "Amp" and it["name"].endswith(" Prism"):
+                # An amp counts once per prism
+                add(it, category="Amp")
+            elif typ == "Kitgun Component" and it.get("masterable") or it["name"] in EXTRA_SECONDARY_KITGUNS:
+                # A kitgun chamber counts once as a secondary and once as a primary
+                add(it, category="Secondary", type="Kitgun")
+                add(it, name=it["name"] + " (Primary)", category="Primary", type="Kitgun",
+                    wikiaUrl=it.get("wikiaUrl") or "https://wiki.warframe.com/w/" + it["name"])
+            elif it.get("masterable"):
+                add(it)
+    return items
+
+
+def item_record(it, components, by_unique, market, relic_meta):
+    per_rank, total, cap = mastery_xp(it)
+    rec = {
+        "name": it["name"],
+        "category": it.get("category"),
+        "type": it.get("type"),
+        "description": it.get("description", ""),
+        "masteryReq": it.get("masteryReq", 0),
+        "image": it.get("imageName"),
+        "wikiImage": it.get("wikiaThumbnail"),
+        "wiki": it.get("wikiaUrl") or "https://wiki.warframe.com/w/" + it["name"].replace(" ", "_"),
+        "isPrime": bool(it.get("isPrime")) or it["name"].endswith(" Prime"),
+        "vaulted": bool(it.get("vaulted")),
+        "releaseDate": it.get("releaseDate"),
+        "maxRank": cap,
+        "xpPerRank": per_rank,
+        "masteryXP": total,
+        "buildPrice": it.get("buildPrice"),
+        "buildTime": it.get("buildTime"),
+        "marketCost": it.get("marketCost"),
+        "parts": [],
+        "resources": [],
+        "requiresItems": [],
+    }
+    for comp in it.get("components") or []:
+        uid, count = comp["uniqueName"], comp.get("itemCount", 1)
+        c = components.get(uid)
+        ref = by_unique.get(uid, {})
+        if c is None or uid.startswith("/Lotus/Weapons/") or uid.startswith("/Lotus/Powersuits/"):
+            name = (c or ref).get("name", uid.rsplit("/", 1)[-1])
+            if uid.startswith(("/Lotus/Weapons/", "/Lotus/Powersuits/")):
+                existing = next((r for r in rec["requiresItems"] if r["name"] == name), None)
+                if existing:
+                    existing["count"] += count
+                else:
+                    rec["requiresItems"].append({"name": name, "count": count})
+                continue
+            rec["resources"].append({"name": name, "count": count, "image": ref.get("imageName")})
+            continue
+        drops = c.get("drops") or []
+        is_part = c.get("name") in ("Blueprint",) or "Recipes" in uid or "WeaponParts" in uid
+        if not is_part:
+            rec["resources"].append({"name": c.get("name"), "count": count, "image": c.get("imageName")})
+            continue
+        relics, other = {}, {}
+        for d in drops:
+            m = RELIC_RE.match(d.get("location", ""))
+            if m:
+                relic = f"{m.group(1)} {m.group(2)}"
+                ref_level = m.group(3) or "Intact"
+                r = relics.setdefault(relic, {"relic": relic, "tier": m.group(1), "chances": {}})
+                r["chances"][ref_level] = d.get("chance")
+            else:
+                loc = re.sub(r", Rotation \w$", "", d.get("location", ""))
+                o = other.setdefault(loc, {"location": loc, "chance": 0, "rarity": d.get("rarity")})
+                o["chance"] = max(o["chance"], d.get("chance") or 0)
+        relic_list = []
+        for r in relics.values():
+            r["rarity"] = rarity_from_intact(r["chances"].get("Intact"))
+            r["vaulted"] = relic_meta.get(r["relic"], {}).get("vaulted")
+            relic_list.append(r)
+        order = {"Lith": 0, "Meso": 1, "Neo": 2, "Axi": 3, "Requiem": 4}
+        relic_list.sort(key=lambda r: (order.get(r["tier"], 9), r["relic"]))
+        # Same part listed twice (e.g. two drop tables) -> merge
+        existing = next((p for p in rec["parts"] if p["name"] == c.get("name")), None)
+        if existing:
+            existing["count"] = max(existing["count"], count)
+            continue
+        rec["parts"].append({
+            "name": c.get("name"),
+            "count": count,
+            "ducats": c.get("ducats"),
+            "tradable": c.get("tradable"),
+            "market": market.get(uid),
+            "relics": relic_list,
+            "otherDrops": sorted(other.values(), key=lambda o: -o["chance"])[:6],
+        })
+    order = {"Blueprint": 0}
+    rec["parts"].sort(key=lambda p: (order.get(p["name"], 1), p["name"]))
+    return rec
 
 
 def main(pkg):
@@ -83,90 +206,9 @@ def main(pkg):
 
     out = {"generated": date.today().isoformat(), "items": {}, "nodes": {}}
 
-    for entry in tracker["items"]:
-        it = by_name.get(entry["name"].lower())
-        if not it:
-            print("WARN: not found:", entry["name"], file=sys.stderr)
-            continue
-        per_rank, total, cap = mastery_xp(it)
-        rec = {
-            "name": it["name"],
-            "category": it.get("category"),
-            "type": it.get("type"),
-            "description": it.get("description", ""),
-            "masteryReq": it.get("masteryReq", 0),
-            "image": it.get("imageName"),
-            "wikiImage": it.get("wikiaThumbnail"),
-            "wiki": it.get("wikiaUrl") or "https://wiki.warframe.com/w/" + it["name"].replace(" ", "_"),
-            "isPrime": bool(it.get("isPrime")) or it["name"].endswith(" Prime"),
-            "vaulted": bool(it.get("vaulted")),
-            "releaseDate": it.get("releaseDate"),
-            "maxRank": cap,
-            "xpPerRank": per_rank,
-            "masteryXP": total,
-            "buildPrice": it.get("buildPrice"),
-            "buildTime": it.get("buildTime"),
-            "marketCost": it.get("marketCost"),
-            "parts": [],
-            "resources": [],
-            "requiresItems": [],
-        }
-        for comp in it.get("components") or []:
-            uid, count = comp["uniqueName"], comp.get("itemCount", 1)
-            c = components.get(uid)
-            ref = by_unique.get(uid, {})
-            if c is None or uid.startswith("/Lotus/Weapons/") or uid.startswith("/Lotus/Powersuits/"):
-                name = (c or ref).get("name", uid.rsplit("/", 1)[-1])
-                if uid.startswith(("/Lotus/Weapons/", "/Lotus/Powersuits/")):
-                    existing = next((r for r in rec["requiresItems"] if r["name"] == name), None)
-                    if existing:
-                        existing["count"] += count
-                    else:
-                        rec["requiresItems"].append({"name": name, "count": count})
-                    continue
-                rec["resources"].append({"name": name, "count": count, "image": ref.get("imageName")})
-                continue
-            drops = c.get("drops") or []
-            is_part = c.get("name") in ("Blueprint",) or "Recipes" in uid or "WeaponParts" in uid
-            if not is_part:
-                rec["resources"].append({"name": c.get("name"), "count": count, "image": c.get("imageName")})
-                continue
-            relics, other = {}, {}
-            for d in drops:
-                m = RELIC_RE.match(d.get("location", ""))
-                if m:
-                    relic = f"{m.group(1)} {m.group(2)}"
-                    ref_level = m.group(3) or "Intact"
-                    r = relics.setdefault(relic, {"relic": relic, "tier": m.group(1), "chances": {}})
-                    r["chances"][ref_level] = d.get("chance")
-                else:
-                    loc = re.sub(r", Rotation \w$", "", d.get("location", ""))
-                    o = other.setdefault(loc, {"location": loc, "chance": 0, "rarity": d.get("rarity")})
-                    o["chance"] = max(o["chance"], d.get("chance") or 0)
-            relic_list = []
-            for r in relics.values():
-                r["rarity"] = rarity_from_intact(r["chances"].get("Intact"))
-                r["vaulted"] = relic_meta.get(r["relic"], {}).get("vaulted")
-                relic_list.append(r)
-            order = {"Lith": 0, "Meso": 1, "Neo": 2, "Axi": 3, "Requiem": 4}
-            relic_list.sort(key=lambda r: (order.get(r["tier"], 9), r["relic"]))
-            # Same part listed twice (e.g. two drop tables) -> merge
-            existing = next((p for p in rec["parts"] if p["name"] == c.get("name")), None)
-            if existing:
-                existing["count"] = max(existing["count"], count)
-                continue
-            rec["parts"].append({
-                "name": c.get("name"),
-                "count": count,
-                "ducats": c.get("ducats"),
-                "tradable": c.get("tradable"),
-                "market": market.get(uid),
-                "relics": relic_list,
-                "otherDrops": sorted(other.values(), key=lambda o: -o["chance"])[:6],
-            })
-        order = {"Blueprint": 0}
-        rec["parts"].sort(key=lambda p: (order.get(p["name"], 1), p["name"]))
-        out["items"][it["name"]] = rec
+    for it in masterable_items(data_dir, tracker, by_name):
+        rec = item_record(it, components, by_unique, market, relic_meta)
+        out["items"][rec["name"]] = rec
 
     nodes = json.load(open(os.path.join(data_dir, "Node.json")))
     for entry in tracker["nodes"]:
@@ -191,7 +233,7 @@ def main(pkg):
         }
 
     with open(os.path.join(ROOT, "data", "items.json"), "w") as fh:
-        json.dump(out, fh, indent=1, ensure_ascii=False)
+        json.dump(out, fh, separators=(",", ":"), ensure_ascii=False)
     print(f'wrote {len(out["items"])} items, {len(out["nodes"])} nodes')
 
 
